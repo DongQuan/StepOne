@@ -3,11 +3,11 @@ Jiangxuan Konglingxing Chentao Step One
 
 ##Project member:
 - Jxuan95
- +前端
+ + 前端
 - konglx90
- +python
+ + python
 - ct1457562356
- +Android
+ + Android
 
 ###分项目
 1. Spring/Spring MVC
