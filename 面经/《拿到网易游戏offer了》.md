@@ -150,8 +150,11 @@
 
 &emsp;&emsp;总结：
                 &emsp;&emsp;（1）项目经验，项目经验，项目经验，重要的事情说三遍。
+
                &emsp;&emsp; （2）技术是根本，打铁还需自身硬。
+
                &emsp;&emsp; （3）tcp/ip 一定要扎实，哪里都用得到。
+
                &emsp;&emsp; （4）要在适当的时候适当地装逼。
 
 [1]:http://bbs.uestc.edu.cn/forum.php?mod=viewthread&tid=1563274&extra=page%3D2
