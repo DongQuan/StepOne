@@ -10,7 +10,7 @@
 		       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	
 	    <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	    <context:component-scan base-package="com.blacktiger.graduate_websit.controller"/>
+	    <context:component-scan base-package="me.test.controller"/>
 	
 	    <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
 	    <!--Jxuan:需要引入jackson jar包-->
@@ -86,7 +86,7 @@
 	            <mvc:mapping path="/user/**"/>
 	            <mvc:exclude-mapping path="/admin/checkLogin"/>
 	            <mvc:exclude-mapping path="/user/checkLogin"/>
-	            <bean class="com.blacktiger.graduate_websit.interceptor.Interceptor"/>
+	            <bean class="me.test.interceptor.Interceptor"/>
 	        </mvc:interceptor>
 	    </mvc:interceptors>
 	
