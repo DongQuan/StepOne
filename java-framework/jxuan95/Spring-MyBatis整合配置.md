@@ -9,7 +9,7 @@
 		       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 		
 		    <!-- 自动扫描 -->
-		    <context:component-scan base-package="com.blacktiger.graduate_websit" />
+		    <context:component-scan base-package="me.test" />
 		    <!-- 引入配置文件 -->
 		    <bean id="propertyConfigurer"
 		          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -56,7 +56,7 @@
 		
 		    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
 		    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		        <property name="basePackage" value="com.blacktiger.graduate_websit.dao" />
+		        <property name="basePackage" value="me.test.dao" />
 		        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 		    </bean>
 		
