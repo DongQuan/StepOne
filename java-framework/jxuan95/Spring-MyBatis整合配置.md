@@ -1,6 +1,6 @@
 ####Spring-MyBatis配置
 
-1. 版本1：
+1. xml文件：
 
 		<?xml version="1.0" encoding="UTF-8"?>
 		<beans xmlns="http://www.springframework.org/schema/beans"
@@ -67,4 +67,9 @@
 		    </bean>
 		</beans>
 
-2.版本2：
+2.properties文件：
+
+        #使用本地数据库
+        url=jdbc:mysql://127.0.0.1:3306/db?useUnicode=true&characterEncoding=utf8
+        username=root
+        password=root
