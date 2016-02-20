@@ -28,4 +28,29 @@ public class Arithmetic20160220 {
             System.out.println(m);
         }
     }
+
+    /**
+     * 简单选择排序
+     * 基本思想：在要排序的一组数中，选出最小的一个数与第一个位置的数交换；
+     * 然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。
+     */
+    public void selectSort() {
+        int[] array = new int[]{57, 68, 59, 62, 5, 106, 20, 17, 3, 968};
+        int temp;
+        for (int i = 0; i < array.length; i++) {
+            temp = array[i];
+            int j = i + 1;
+            for (; j < array.length; j++) {
+                if (array[j] < array[i]) {
+                    array[i] = array[j];
+                    array[j] = temp;
+                    temp = array[i];
+                }
+            }
+        }
+
+        for (int i : array) {
+            System.out.println(i);
+        }
+    }
 }

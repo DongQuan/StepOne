@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args){
 
         Arithmetic20160220 arithmetic20160220 = new Arithmetic20160220();
-        arithmetic20160220.insertSort();
+//        arithmetic20160220.insertSort();
+        arithmetic20160220.selectSort();
     }
 }
