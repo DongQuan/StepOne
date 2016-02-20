@@ -53,4 +53,28 @@ public class Arithmetic20160220 {
             System.out.println(i);
         }
     }
+
+    /**
+     * 冒泡排序
+     * 在要排序的一组数中，对当前还未排好序的范围内的全部数，自上而下对相邻的两个数依次进行比较和调整，
+     * 让较大的数往下沉，较小的往上冒。
+     * 即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
+     */
+    public void bubbleSort() {
+        int[] array = new int[]{57, 68, 59, 62, 5, 106, 20, 17, 3, 968};
+        int temp;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+
+        for (int i : array) {
+            System.out.println(i);
+        }
+    }
 }

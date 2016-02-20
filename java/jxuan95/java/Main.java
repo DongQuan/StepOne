@@ -10,6 +10,7 @@ public class Main {
 
         Arithmetic20160220 arithmetic20160220 = new Arithmetic20160220();
 //        arithmetic20160220.insertSort();
-        arithmetic20160220.selectSort();
+//        arithmetic20160220.selectSort();
+        arithmetic20160220.bubbleSort();
     }
 }
