@@ -1,4 +1,4 @@
-package jxuan95;
+package jxuan95.java;
 
 /**
  * Created by jxuan on 16-2-20.
