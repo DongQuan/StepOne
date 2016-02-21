@@ -1,5 +1,7 @@
 package jxuan95.java;
 
+import java.util.Arrays;
+
 /**
  * Created by jxuan on 16-2-20.
  * 算法20160220
@@ -95,11 +97,39 @@ public class Arithmetic {
      * 通过一趟排序将待排序记录分割成独立的两部分，其中一部分记录的关键字均比另一部分关键字小，
      * 则分别对这两部分继续进行排序，直到整个序列有序。
      */
-    public void quickSort() {
-        int[] a = new int[]{49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 5,
-                4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35, 25, 53, 51};
+    public void quickSort(int[] a, int start, int end) {
+        // 设置关键数据key为要排序数组的第一个元素，
+        // 即第一趟排序后，key右边的数全部比key大，key左边的数全部比key小
+        int key = a[start];
+        // 设置数组左边的索引，往右移动比key大的数
+        int i = start;
+        // 设置数组右边的索引，往左移动比key小的数
+        int j = end;
 
+        // 如果左边索引比右边索引小，则还有数据没有排序
+        while (i < j) {
+            while (a[j] > key && j > i) {
+                j--;
+            }
+            a[i] = a[j];
 
+            while (a[i] < key && i < j) {
+                i++;
+            }
+            a[j] = a[i];
+        }
+        // 此时 i==j
+        a[i] = key;
+
+        // 递归调用
+        if (i - 1 > start) {
+            // 递归调用，把key前面的完成排序
+            quickSort(a, start, i - 1);
+        }
+        if (i + 1 < end) {
+            // 递归调用，把key后面的完成排序
+            quickSort(a, i + 1, end);
+        }
     }
 
 }
