@@ -11,6 +11,7 @@ public class Main {
         Arithmetic arithmetic = new Arithmetic();
 //        arithmetic.insertSort();
 //        arithmetic.selectSort();
-        arithmetic.bubbleSort();
+//        arithmetic.bubbleSort();
+        arithmetic.shellSort();
     }
 }

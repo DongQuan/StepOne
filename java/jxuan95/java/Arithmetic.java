@@ -86,7 +86,8 @@ public class Arithmetic {
      * 当这些数据项排过一趟序之后，希尔排序算法减小数据项的间隔再进行排序，依次进行下去，
      * 进行这些排序时的数据项之间的间隔被称为增量，习惯上用字母h来表示这个增量。
      */
-    public void shellSort(){
+    public void shellSort() {
+
 
     }
 
