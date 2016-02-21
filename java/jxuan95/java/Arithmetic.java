@@ -4,7 +4,7 @@ package jxuan95.java;
  * Created by jxuan on 16-2-20.
  * 算法20160220
  */
-public class Arithmetic20160220 {
+public class Arithmetic {
 
     /**
      * 直接插入排序
@@ -77,4 +77,6 @@ public class Arithmetic20160220 {
             System.out.println(i);
         }
     }
+
+
 }
