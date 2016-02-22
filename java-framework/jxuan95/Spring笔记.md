@@ -56,3 +56,17 @@ ___
 	            </list>
 	        </property>
 	    </bean>
+	    
+	    在前端js中
+	    
+	    $.ajax({
+                url: url,
+                data: JSON.stringify(user),
+                dataType: "json",
+                type: "POST",
+                contentType : 'application/json',
+                success: function (data) {
+                     console.log(data);
+                }
+               })
+        设置contentType
