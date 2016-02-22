@@ -33,3 +33,26 @@ ___
 		        </property>
 		    </bean>
 
+3. 前端发异步请求415错误解决办法：
+		
+		在spring-mvc配置文件中的adapter添加：
+		<!-- HandlerAdapter -->
+	    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+
+	        <!--解决415错误-->
+	        <property name="messageConverters">
+	            <list>
+	                <ref bean="jsonHttpMessageConverter" />
+	            </list>
+	        </property>
+	    </bean>
+
+		然后添加jackson包依赖：
+		<!--添加jackson依赖包，解决415错误-->
+	    <bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	        <property name="supportedMediaTypes">
+	            <list>
+	                <value>application/json;charset=UTF-8</value>
+	            </list>
+	        </property>
+	    </bean>
