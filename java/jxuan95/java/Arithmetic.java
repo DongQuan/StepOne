@@ -109,12 +109,14 @@ public class Arithmetic {
             while (i < j) {
                 while (i < j && a[j] >= temp) j--;
                 if (i < j) {
-                    a[i++] = a[j];
+                    a[i] = a[j];
+                    i++;
                 }
 
                 while (i < j && a[i] <= temp) i++;
                 if (i < j) {
-                    a[j--] = a[i];
+                    a[j] = a[i];
+                    j--;
                 }
             }
             a[i] = temp;
