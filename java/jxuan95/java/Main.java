@@ -16,6 +16,6 @@ public class Main {
 //        arithmetic.selectSort();
 //        arithmetic.bubbleSort();
 //        arithmetic.shellSort();
-        arithmetic.quickSort(a, 10,20);
+        arithmetic.quickSort(a, 0,27);
     }
 }
