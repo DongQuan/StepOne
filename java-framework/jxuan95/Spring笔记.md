@@ -79,3 +79,7 @@ ___
 5. 服务器端maven打包war文件：
 
         在项目目录下运行mvn clean package命令，就会在target目录下生成该项目的war文件。
+        
+6. Maven编译代码的相关命令:[原文链接][1]
+
+[1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
