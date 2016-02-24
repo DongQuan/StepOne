@@ -1,5 +1,7 @@
 package jxuan95.java;
 
+import java.util.Scanner;
+
 /**
  * Created by jxuan on 16-2-24.
  * 《算法竞赛入门经典第二版》
@@ -35,5 +37,25 @@ public class ACM_Example {
             int b = n % 100;
             if (a % 10 == a / 10 && b % 10 == b / 10) System.out.println(n);
         }
+    }
+
+    /**
+     * 题目：对于任意大于1的自然数n，若n为奇数，则将n变为3n+1,否则变为n的一半。经过若干次这样的变换，一定会使n变为1.
+     * 输入n,输出变换的次数
+     * 例题2-2
+     * 注意乘法溢出
+     */
+    public void example2_2() {
+        System.out.print("请输入一个大于1的自然数：");
+        Scanner in = new Scanner(System.in);
+        long a = in.nextInt();
+        int count = 0;
+        while (a > 1) {
+            if (a % 2 == 1) a = 3 * a + 1;
+            else a /= 2;
+            count++;
+        }
+
+        System.out.println("次数：" + count);
     }
 }

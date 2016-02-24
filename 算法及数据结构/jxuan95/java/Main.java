@@ -20,6 +20,7 @@ public class Main {
 
         ACM_Example acmExample = new ACM_Example();
 //        acmExample.example2_1();
-        acmExample.example2_1_2();
+//        acmExample.example2_1_2();
+        acmExample.example2_2();
     }
 }
