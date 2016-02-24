@@ -72,4 +72,25 @@ public class ACM_Training {
         }
         System.out.println("sum:" + sum);
     }
+
+    /**
+     * 题目：阶乘之和，输入n，计算S=1!+2!+3!+.....+n!的末6位。n≤10的六次方
+     */
+    public void example2_4() {
+        System.out.println("请输入整数n:");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        long S = 0;
+        long result = 0;
+        for (int i = 1; i <= n; i++) {
+            int temp = 1;
+            for (int j = 1; j <= i; j++) {
+                temp *= j;
+            }
+            S += temp;
+        }
+        result = S % 1000000;
+        System.out.println(S);
+        System.out.println("后六位为：" + result);
+    }
 }
