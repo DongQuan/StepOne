@@ -16,9 +16,9 @@ public class Main {
 //        arithmetic.selectSort();
 //        arithmetic.bubbleSort();
 //        arithmetic.shellSort();
-        arithmetic.quickSort(a, 0,27);
+//        arithmetic.quickSort(a, 0,27);
 
         ACM_Example acmExample = new ACM_Example();
-
+        acmExample.example2_1();
     }
 }
