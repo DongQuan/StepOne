@@ -24,7 +24,7 @@ public class ACM_Example {
 
     /**
      * 题目：输出所有形如aabb的4位完全平方数
-     * 枚举平方根
+     * 枚举平方根,避免开方浮点运算误差
      */
     public void example2_1_2() {
         for (int i = 1; ; i++) {
