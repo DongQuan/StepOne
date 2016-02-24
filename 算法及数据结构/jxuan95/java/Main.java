@@ -17,5 +17,8 @@ public class Main {
 //        arithmetic.bubbleSort();
 //        arithmetic.shellSort();
         arithmetic.quickSort(a, 0,27);
+
+        ACM_Example acmExample = new ACM_Example();
+
     }
 }
