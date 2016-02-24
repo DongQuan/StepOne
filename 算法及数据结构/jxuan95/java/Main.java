@@ -18,9 +18,10 @@ public class Main {
 //        arithmetic.shellSort();
 //        arithmetic.quickSort(a, 0,27);
 
-        ACM_Example acmExample = new ACM_Example();
+        ACM_Training acmExample = new ACM_Training();
 //        acmExample.example2_1();
 //        acmExample.example2_1_2();
-        acmExample.example2_2();
+//        acmExample.example2_2();
+        acmExample.exapmle2_3();
     }
 }
