@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by jxuan on 16-2-20.
  * 算法20160220
  */
-public class Arithmetic {
+public class Arithmetic_Sort {
 
     /**
      * 直接插入排序
