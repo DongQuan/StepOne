@@ -82,4 +82,7 @@ ___
         
 6. Maven编译代码的相关命令:[原文链接][1]
 
+7. SpringMVC上传文件的三种方式：[原文链接][2]
+
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
+[2]: http://www.cnblogs.com/fjsnail/p/3491033.html
