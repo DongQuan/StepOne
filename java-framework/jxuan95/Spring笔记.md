@@ -84,5 +84,35 @@ ___
 
 7. SpringMVC上传文件的三种方式：[原文链接][2]
 
+8. FastJson日期格式化：
+
+        FastJSON可以直接对日期类型格式化，在缺省的情况下，FastJSON会将Date转成long。
+        
+        例5：FastJSON将java.util.Date转成long。
+        
+        1 String dateJson = JSON.toJSONString(new Date());
+        2 System.out.println(dateJson);
+        输出结果：
+        
+        1401370199040
+        例6：使用SerializerFeature特性格式化日期。
+        
+        1 String dateJson = JSON.toJSONString(new Date(), SerializerFeature.WriteDateUseDateFormat);
+        2 System.out.println(dateJson);
+        输出结果：
+        
+        "2014-05-29 21:36:24"
+        也可以指定输出日期格式。
+        
+        例7：指定输出日期格式。
+        
+        1 String dateJson = JSON.toJSONStringWithDateFormat(new Date(), "yyyy-MM-dd HH:mm:ss.SSS");
+        2 System.out.println(dateJson);
+        输出结果：
+        
+        "2014-05-29 21:47:00.154"
+
+
+
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
