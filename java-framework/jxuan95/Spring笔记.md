@@ -114,8 +114,11 @@ ___
         
 9. request.setAttribute()、session.setAttribute()和request.getParameter()、request.getAttribute()的联系与区别:[原文链接][3]
 
+10. spring mvc session超时，处理ajax请求:[原文链接][4]
+
 
 
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
 [3]: http://blog.csdn.net/happyflyingave/article/details/8045447
+[4]: http://my.oschina.net/zhk/blog/323452
