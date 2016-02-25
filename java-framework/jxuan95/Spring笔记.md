@@ -111,8 +111,11 @@ ___
         输出结果：
         
         "2014-05-29 21:47:00.154"
+        
+9. request.setAttribute()、session.setAttribute()和request.getParameter()、request.getAttribute()的联系与区别:[原文链接][3]
 
 
 
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
+[3]: http://blog.csdn.net/happyflyingave/article/details/8045447
