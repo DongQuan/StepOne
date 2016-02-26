@@ -116,6 +116,17 @@ ___
 
 10. spring mvc session超时，处理ajax请求:[原文链接][4]
 
+11. 放在服务器上的项目总是意外清除session的解决办法：
+
+        有可能造成该问题的原因：在本地打包war文件的时候，会有一个警告，说是javaee-****.jar没有load，session是和这个jar包相关联的，没有加载这个包就会出问题。
+        解决办法：<dependency>
+                         <groupId>javax</groupId>
+                         <artifactId>javaee-web-api</artifactId>
+                         <version>7.0</version>
+                         <scope>provided</scope>
+                     </dependency>
+                     在pom.xml里面添加<scope>provided</scope>这一行
+
 
 
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
