@@ -132,6 +132,57 @@ ___
 
 13. springmvc文件上传下载:[原文链接][6]
 
+14. Spring MVC 文件下载功能：
+
+         /**
+             * 测试下载
+             */
+            @RequestMapping(value = "/download", method = RequestMethod.GET)
+        //    public ResponseEntity<byte[]> download() throws IOException {
+        //        HttpHeaders headers = new HttpHeaders();
+        //        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        //        headers.setContentDispositionFormData("attachment", "dict.txt");
+        //        File file = new File("/attachment/test.txt");
+        //        return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(new File("/attachment/test.txt")),
+        //                headers, HttpStatus.CREATED);
+        //    }
+            public static void download(HttpServletRequest request, HttpServletResponse response) throws Exception {
+                // 得到要下载的文件名
+                String fileName = request.getParameter("filename");
+                fileName = "test.txt";
+                fileName = new String(fileName.getBytes("iso8859-1"), "UTF-8");
+                ServletContext sc = request.getSession().getServletContext();
+                String fileSaveRootPath = sc.getRealPath("/attachment");
+                File file = new File(fileSaveRootPath + "/" + fileName);
+        //        File file = new File("/attachment/test/txt");
+                // 如果文件不存在
+                if (!file.exists()) {
+                    request.setAttribute("message", "您要下载的资源已被删除！！");
+                    System.out.println("您要下载的资源已被删除！！");
+                    return;
+                }
+                // 处理文件名
+                String realname = fileName.substring(fileName.indexOf("_") + 1);
+                // 设置响应头，控制浏览器下载该文件
+                response.setHeader("content-disposition", "attachment;filename="
+                        + new String(realname.getBytes("utf-8"), "ISO8859-1"));
+                // 读取要下载的文件，保存到文件输入流
+                FileInputStream in = new FileInputStream(fileSaveRootPath + "/" + fileName);
+                // 创建输出流
+                OutputStream out = response.getOutputStream();
+                // 创建缓冲区
+                byte buffer[] = new byte[1024];
+                int len = 0;
+                // 循环将输入流中的内容读取到缓冲区当中
+                while ((len = in.read(buffer)) > 0) {
+                    // 输出缓冲区的内容到浏览器，实现文件下载
+                    out.write(buffer, 0, len);
+                }
+                // 关闭文件输入流
+                in.close();
+                // 关闭输出流
+                out.close();
+            }
 
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
