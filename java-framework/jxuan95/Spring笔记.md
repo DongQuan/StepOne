@@ -130,9 +130,12 @@ ___
 
 12. Spring MVC 文件上传下载:[原文链接][5]
 
+13. springmvc文件上传下载:[原文链接][6]
+
 
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
 [3]: http://blog.csdn.net/happyflyingave/article/details/8045447
 [4]: http://my.oschina.net/zhk/blog/323452
 [5]: http://blog.csdn.net/geloin/article/details/7537425
+[6]: http://luoqi-email.iteye.com/blog/2122849
