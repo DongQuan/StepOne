@@ -128,8 +128,11 @@ ___
                      在pom.xml里面添加<scope>provided</scope>这一行
 
 
+12. Spring MVC 文件上传下载:[原文链接][5]
+
 
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
 [3]: http://blog.csdn.net/happyflyingave/article/details/8045447
 [4]: http://my.oschina.net/zhk/blog/323452
+[5]: http://blog.csdn.net/geloin/article/details/7537425
