@@ -184,6 +184,15 @@ ___
                 out.close();
             }
 
+15. 文件下载的时候“chrome 来自服务器的响应包含重复标头”解决办法：
+        
+        解决办法：
+        将java后台代码
+        response.addHeader("Content-Disposition","inline,filename="+filename);
+        修改为：
+        response.addHeader("Content-Disposition","inline;filename=\""+filename+"\"");
+
+
 [1]: http://blog.sina.com.cn/s/blog_4f925fc30102ed40.html
 [2]: http://www.cnblogs.com/fjsnail/p/3491033.html
 [3]: http://blog.csdn.net/happyflyingave/article/details/8045447
