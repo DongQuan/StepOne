@@ -147,7 +147,7 @@ public class ACM_Training_Part2 {
             int k = 0;//表示第几层
             for (; n > 0; n--) {
                 k++;
-                for (int m =0; m<k-1; m++) {
+                for (int m = 0; m < k - 1; m++) {
                     System.out.print(" ");
                 }
                 for (int i = 0; i < (2 * n - 1); i++) {
@@ -161,6 +161,30 @@ public class ACM_Training_Part2 {
         } else {
             System.out.println("输入非法！请重新输入!");
             exercises2_3();
+        }
+    }
+
+    /**
+     * 习题2-4：子序列的和
+     * P35
+     */
+    public void exercises2_4() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("请输入第一个数：");
+        int n = in.nextInt();
+        System.out.print("请输入第二个数：");
+        int m = in.nextInt();
+        double sum = 0;
+
+        if (n < m && n < 1000000 && m < 1000000) {
+            for (; n <= m; n++) {
+                sum += 1 / (Math.pow(n, 2));
+            }
+            System.out.printf("%.5f",sum);
+        } else {
+            System.out.println("输入有误，请重写输入！");
+            exercises2_4();
         }
     }
 }
