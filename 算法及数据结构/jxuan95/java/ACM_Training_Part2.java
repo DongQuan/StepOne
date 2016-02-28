@@ -114,6 +114,23 @@ public class ACM_Training_Part2 {
      * P34
      */
     public void exercise2_2() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("请输入数据1：");
+        int a = in.nextInt();
+        System.out.print("请输入数据2：");
+        int b = in.nextInt();
+        System.out.print("请输入数据3：");
+        int c = in.nextInt();
 
+        boolean result = false;
+
+        for (int x = 10; x < 100; x++) {
+            if (x % 3 == a && x % 5 == b && x % 7 == c) {
+                System.out.println("总人数：" + x);
+                result = true;
+            }
+        }
+
+        if (!result) System.out.println("No answer.");
     }
 }
