@@ -32,5 +32,6 @@ public class Main {
 //        acmExample.exercises2_6();
 
         ACM_Training_Part3 acmTrainingPart3 = new ACM_Training_Part3();
+        acmTrainingPart3.example3_1();
     }
 }
