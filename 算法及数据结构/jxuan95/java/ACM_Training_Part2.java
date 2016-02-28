@@ -144,7 +144,12 @@ public class ACM_Training_Part2 {
         System.out.print("请输入三角形层数(小于20)：");
         n = in.nextInt();
         if (n > 0 && n < 20) {
+            int k = 0;//表示第几层
             for (; n > 0; n--) {
+                k++;
+                for (int m =0; m<k-1; m++) {
+                    System.out.print(" ");
+                }
                 for (int i = 0; i < (2 * n - 1); i++) {
                     if (i < (2 * n - 2)) {
                         System.out.print("*");
@@ -154,8 +159,8 @@ public class ACM_Training_Part2 {
                 }
             }
         } else {
-            System.out.print("输入非法！请重新输入：");
-            n = in.nextInt();
+            System.out.println("输入非法！请重新输入!");
+            exercises2_3();
         }
     }
 }
