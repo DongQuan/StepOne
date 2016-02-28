@@ -8,6 +8,7 @@ import java.util.Scanner;
 /**
  * Created by jxuan on 16-2-24.
  * 《算法竞赛入门经典第二版》
+ * 第二章
  */
 public class ACM_Training_Part2 {
 
