@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by jxuan on 16-2-24.
  * 《算法竞赛入门经典第二版》
  */
-public class ACM_Training {
+public class ACM_Training_Part2 {
 
     /**
      * 题目：输出所有形如aabb的4位完全平方数
@@ -93,4 +93,6 @@ public class ACM_Training {
         System.out.println(S);
         System.out.println("后六位为：" + result);
     }
+
+
 }
