@@ -96,6 +96,7 @@ public class ACM_Training_Part2 {
 
     /**
      * 习题2-1：输出100~999中的所有水仙花数。若3位数ABC满足...
+     * P34
      */
     public void exercises2_1() {
         for (int i = 100; i < 999; i++) {
@@ -106,5 +107,13 @@ public class ACM_Training_Part2 {
                 System.out.println("水仙花数：" + i);
             }
         }
+    }
+
+    /**
+     * 习题2-2：韩信点兵
+     * P34
+     */
+    public void exercise2_2() {
+
     }
 }
