@@ -44,4 +44,40 @@ public class ACM_Training_Part3 {
             System.out.println("程序退出");
         }
     }
+
+    /**
+     * 例题：3-2
+     * 开灯问题
+     */
+    public void example3_2() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("输入灯的盏数：");
+        int n = in.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = 1;
+        }
+
+        System.out.print("请输入人数：");
+        int m = in.nextInt();
+        if (m < n) {
+            for (int j = 2; j <= m; j++) {
+                for (int k = 1; j * k < a.length; k++) {
+                    if (a[j * k - 1] == 0) {
+                        a[j * k - 1] = 1;
+                    } else {
+                        a[j * k - 1] = 0;
+                    }
+                }
+            }
+
+            for (int z = 0; z < a.length; z++) {
+                if (a[z] == 1) {
+                    System.out.print(z + 1 + " ");
+                }
+            }
+        } else {
+            System.out.println("输出有误");
+        }
+    }
 }
