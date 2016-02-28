@@ -181,10 +181,30 @@ public class ACM_Training_Part2 {
             for (; n <= m; n++) {
                 sum += 1 / (Math.pow(n, 2));
             }
-            System.out.printf("%.5f",sum);
+            System.out.printf("%.5f", sum);
         } else {
             System.out.println("输入有误，请重写输入！");
             exercises2_4();
+        }
+    }
+
+    /**
+     * 习题2-5：分数化小数
+     * P35
+     */
+    public void exercises2_5() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("请输入第一个数：");
+        double a = in.nextInt();
+        System.out.println("请输入第二个数：");
+        double b = in.nextInt();
+        System.out.println("请输入第三个数：");
+        int c = in.nextInt();
+
+        if (a < 1000000 && b < 1000000 && c < 100) {
+            double result = a / b;
+            String temp = "%." + c + "f";
+            System.out.printf(temp, result);
         }
     }
 }
