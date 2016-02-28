@@ -1,5 +1,8 @@
 package jxuan95.java;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -206,5 +209,42 @@ public class ACM_Training_Part2 {
             String temp = "%." + c + "f";
             System.out.printf(temp, result);
         }
+    }
+
+    /**
+     * 习题2-6：排列
+     * 用1,2,3……,9组成3个三位数abc,def和ghi,每个数字恰好使用一次,要求abc:def:ghi=1:2:3.输出所有解。
+     * P35
+     */
+    public void exercises2_6() {
+
+        int i, j, k;
+        int result_add, result_mul;
+
+        for (i = 123; i < 329; i++) {
+            j = i * 2;
+            k = i * 3;
+            result_add = 0;
+            result_mul = 1;
+
+            int[] array1 = result(i, result_add, result_mul);
+            int[] array2 = result(j, result_add, result_mul);
+            int[] array3 = result(k, result_add, result_mul);
+
+            if (array1[0] + array2[0] + array3[0] == 45 && array1[1] * array2[1] * array3[1] == 362880) {
+                System.out.println(i + " " + j + " " + k);
+            }
+        }
+    }
+
+    int[] result(int num, int result_add, int result_mul) {
+        int i = num / 100;
+        int j = num / 10 % 10;
+        int k = num % 10;
+
+        result_add += i + j + k;
+        result_mul *= i * j * k;
+
+        return new int[]{result_add, result_mul};
     }
 }
