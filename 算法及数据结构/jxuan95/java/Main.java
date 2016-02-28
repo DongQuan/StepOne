@@ -23,6 +23,7 @@ public class Main {
 //        acmExample.example2_1_2();
 //        acmExample.example2_2();
 //        acmExample.exapmle2_3();
-        acmExample.example2_4();
+//        acmExample.example2_4();
+        acmExample.exercises2_1();
     }
 }

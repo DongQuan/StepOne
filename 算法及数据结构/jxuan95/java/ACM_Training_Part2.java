@@ -94,5 +94,17 @@ public class ACM_Training_Part2 {
         System.out.println("后六位为：" + result);
     }
 
-
+    /**
+     * 习题2-1：输出100~999中的所有水仙花数。若3位数ABC满足...
+     */
+    public void exercises2_1() {
+        for (int i = 100; i < 999; i++) {
+            int A = i / 100;
+            int B = (i / 10) % 10;
+            int C = i % 10;
+            if (i == (int) (Math.pow(A, 3) + Math.pow(B, 3) + Math.pow(C, 3))) {
+                System.out.println("水仙花数：" + i);
+            }
+        }
+    }
 }
