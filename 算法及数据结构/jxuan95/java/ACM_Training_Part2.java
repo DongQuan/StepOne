@@ -113,7 +113,7 @@ public class ACM_Training_Part2 {
      * 习题2-2：韩信点兵
      * P34
      */
-    public void exercise2_2() {
+    public void exercises2_2() {
         Scanner in = new Scanner(System.in);
         System.out.print("请输入数据1：");
         int a = in.nextInt();
@@ -132,5 +132,30 @@ public class ACM_Training_Part2 {
         }
 
         if (!result) System.out.println("No answer.");
+    }
+
+    /**
+     * 习题2-3：倒三角形问题
+     * P34
+     */
+    public void exercises2_3() {
+        Scanner in = new Scanner(System.in);
+        int n = 0;
+        System.out.print("请输入三角形层数(小于20)：");
+        n = in.nextInt();
+        if (n > 0 && n < 20) {
+            for (; n > 0; n--) {
+                for (int i = 0; i < (2 * n - 1); i++) {
+                    if (i < (2 * n - 2)) {
+                        System.out.print("*");
+                    } else {
+                        System.out.println("*");
+                    }
+                }
+            }
+        } else {
+            System.out.print("输入非法！请重新输入：");
+            n = in.nextInt();
+        }
     }
 }
