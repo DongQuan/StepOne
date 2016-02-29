@@ -57,4 +57,14 @@
         加入
         export MAVEN_OPTS=-Xms128m -Xmx512m
 
+6. 配置gitlab的web hook，当git库的某个分支有提交时，自动触发jenkins的job:
+        
+        jenkins是一个CI工具，其有个插件gitlab hook plugin，可以识别gitlab发送过来的提交信息，并触发对应的job。
+        
+        配置功能：
+        
+        jenkins上只需要配置源代码来自git地址，不需要任何额外的配置；
+        在gitlab的某个项目的web hook配置中，配置固定的触发地址：http://your-jenkins-server/gitlab/build_now
+        当gitlab的指定项目有push后，当push完成时，会触发指定的jenkins server上的对应job，匹配原则为：git project url地址一致，branch一致；
+
 [1]: http://huaoguo.com/work/2014/09/04/%E6%90%AD%E5%BB%BAjenkins%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2.html
