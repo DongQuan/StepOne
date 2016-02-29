@@ -1,7 +1,7 @@
 package jxuan95.java;
 
 /**
- * Created by jxuan on 16-2-20.
+ * Created by jxuan95 on 16-2-20.
  * 测试用
  */
 public class Main {
@@ -32,5 +32,7 @@ public class Main {
 //        acmExample.exercises2_6();
 
         ACM_Training_Part3 acmTrainingPart3 = new ACM_Training_Part3();
+//        acmTrainingPart3.example3_1();
+        acmTrainingPart3.example3_2();
     }
 }
