@@ -21,3 +21,7 @@
         Poll SCM：定时检查源码变更（根据SCM软件的版本号），如果有更新就checkout最新code下来，然后执行构建动作。我的配置如下：
         
         */5 * * * *  （每5分钟检查一次源码变化）
+        
+3. 搭建jenkins实现自动化部署:[原文链接][1]
+
+[1]: http://huaoguo.com/work/2014/09/04/%E6%90%AD%E5%BB%BAjenkins%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2.html
