@@ -67,4 +67,7 @@
         在gitlab的某个项目的web hook配置中，配置固定的触发地址：http://your-jenkins-server/gitlab/build_now
         当gitlab的指定项目有push后，当push完成时，会触发指定的jenkins server上的对应job，匹配原则为：git project url地址一致，branch一致；
 
+7. Jenkins安装gitlab hook plugin失败的解决办法[原文链接][2]
+
 [1]: http://huaoguo.com/work/2014/09/04/%E6%90%AD%E5%BB%BAjenkins%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2.html
+[2]: http://blog.csdn.net/jpiverson/article/details/50044453
