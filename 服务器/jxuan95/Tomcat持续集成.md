@@ -51,4 +51,10 @@
         sudo unzip -n graduate_websit.war -d graduate_websit
         service tomcat7 start
 
+5. 怎么解决JVM溢出：
+
+        sudo vim /etc/profile
+        加入
+        export MAVEN_OPTS=-Xms128m -Xmx512m
+
 [1]: http://huaoguo.com/work/2014/09/04/%E6%90%AD%E5%BB%BAjenkins%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2.html
