@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Created by jxuan on 16-2-28.
+ * Created by jxuan95 on 16-2-28.
  * 《算法竞赛入门经典第二版》
  * 第三章
  */

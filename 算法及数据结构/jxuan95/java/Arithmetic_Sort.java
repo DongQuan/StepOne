@@ -3,7 +3,7 @@ package jxuan95.java;
 import java.util.Arrays;
 
 /**
- * Created by jxuan on 16-2-20.
+ * Created by jxuan95 on 16-2-20.
  * 算法20160220
  */
 public class Arithmetic_Sort {
