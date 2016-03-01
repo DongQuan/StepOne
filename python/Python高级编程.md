@@ -71,8 +71,8 @@ yield 的语法糖， 相对于列表推导式来说把方括号变为了圆括�
 
 ####[Python风格指南](http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/contents/)
 
-    
-   
+####Python一张图    
+   ![Python](imgs/python一张图.png)
 #### small tips: 
      1. 退出命令行 Ctrl + D
      2. 
