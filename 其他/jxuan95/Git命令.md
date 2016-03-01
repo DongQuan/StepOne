@@ -62,3 +62,8 @@
         $ git remote
         origin
         paul
+
+6. 版本回退：
+
+        $ git log
+        $ git reset --hard HEAD^
