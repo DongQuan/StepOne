@@ -34,6 +34,7 @@ public class Main {
         ACM_Training_Part3 acmTrainingPart3 = new ACM_Training_Part3();
 //        acmTrainingPart3.example3_1();
 //        acmTrainingPart3.example3_2();
-        acmTrainingPart3.example3_3();
+//        acmTrainingPart3.example3_3();
+        acmTrainingPart3.example3_4();
     }
 }

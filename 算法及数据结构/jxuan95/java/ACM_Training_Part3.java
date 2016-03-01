@@ -139,8 +139,8 @@ public class ACM_Training_Part3 {
 
         for (int l = 0; l < n; l++) {
             for (int c = 0; c < n; c++) {
-                if (c != n-1) {
-                    System.out.print(a[l][c]+"   ");
+                if (c != n - 1) {
+                    System.out.print(a[l][c] + "   ");
 
                 } else {
                     System.out.println(a[l][c]);
@@ -148,5 +148,39 @@ public class ACM_Training_Part3 {
             }
         }
 
+    }
+
+    /**
+     * 例题3-2：WERTYU
+     * P47
+     */
+    public void example3_4() {
+        char[] cs = new char[]{'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', 'a',
+                's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', 'z', 'x', 'c', 'v'
+                , 'b', 'n', 'm', ',', '.', '/'};
+
+        System.out.println("请输入");
+        Scanner in = new Scanner(System.in);
+
+        String string = in.nextLine();
+        char[] test = new char[string.length()];
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            for (char j : cs) {
+                if (c == 32) {
+                    test[i] = 'B';
+                    break;
+                }
+
+                if (j == c) {
+                    test[i] = cs[new String(cs).indexOf(j) - 1];
+                }
+            }
+        }
+
+        for (char k : test) {
+            if (k == 'B') System.out.print(" ");
+            else System.out.print(k);
+        }
     }
 }
