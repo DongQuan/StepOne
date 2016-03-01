@@ -85,6 +85,7 @@ public class ACM_Training_Part3 {
      * 例题：3-3
      * 蛇形田数问题
      * P39
+     * bug:最后一个数填不上
      */
     public void example3_3() {
         System.out.println("请输入一个整数：");
