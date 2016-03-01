@@ -183,4 +183,48 @@ public class ACM_Training_Part3 {
             else System.out.print(k);
         }
     }
+
+    /**
+     * 程序3-7：回文串和镜像串
+     * P49
+     * 未完成
+     */
+    public void example3_7() {
+        System.out.println("请输入一个大写的字符串：");
+
+        Scanner in = new Scanner(System.in);
+
+        String string = in.next();
+
+        if (string != null) {
+            int length = string.length();
+            boolean p = true, m = true;
+            for (int i = 0; i < length; i++) {
+                if (string.charAt(i) != string.charAt(length - 1 - i)) {
+                    p = false;
+                }
+
+                if (checkMirror(string.charAt(i)) != checkMirror(string.charAt(length - 1 - i))) {
+                    m = false;
+                }
+            }
+
+            if (p && m) {
+                System.out.println("is a mirrored palindrome.");
+            } else if (p) {
+                System.out.println("is a regular palindrome.");
+            } else if (m) {
+                System.out.println("is a mirrored string.");
+            } else {
+                System.out.println("is not a palindrome.");
+            }
+        }
+
+
+    }
+
+    private int checkMirror(char c) {
+        if (Character.isDigit(c)) return c;
+        else return c - 'A';
+    }
 }

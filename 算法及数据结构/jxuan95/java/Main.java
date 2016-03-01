@@ -35,6 +35,7 @@ public class Main {
 //        acmTrainingPart3.example3_1();
 //        acmTrainingPart3.example3_2();
 //        acmTrainingPart3.example3_3();
-        acmTrainingPart3.example3_4();
+//        acmTrainingPart3.example3_4();
+        acmTrainingPart3.example3_7();
     }
 }
