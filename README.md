@@ -3,7 +3,7 @@ Jiangxuan Konglingxing Chentao Step One
 
 ##Project member:
 - Jxuan95
- + 前端
+ + Web前端、Java后台
 - [konglx90][konglx90_blog]
  + python
 - ct1457562356
