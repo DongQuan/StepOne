@@ -227,4 +227,5 @@ public class ACM_Training_Part3 {
         if (Character.isDigit(c)) return c;
         else return c - 'A';
     }
+
 }
