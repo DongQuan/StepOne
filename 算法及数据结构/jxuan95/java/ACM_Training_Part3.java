@@ -323,5 +323,12 @@ public class ACM_Training_Part3 {
         }
     }
 
+    /**
+     * 例题3-6：环状序列问题
+     * P52
+     */
+    public void example3_5() {
+
+    }
 
 }
