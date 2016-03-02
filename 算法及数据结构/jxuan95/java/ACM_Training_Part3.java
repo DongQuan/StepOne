@@ -1,5 +1,6 @@
 package jxuan95.java;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -226,6 +227,72 @@ public class ACM_Training_Part3 {
     private int checkMirror(char c) {
         if (Character.isDigit(c)) return c;
         else return c - 'A';
+    }
+
+    /**
+     * 例题3-4：猜数字游戏的提示
+     * P50
+     */
+    public void example3_8() {
+
+    }
+
+    /**
+     * 例题3-5：生成元
+     * P52
+     */
+    public void example3_9() {
+        System.out.print("请输入一个数字：");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+
+        if (n >= 1 && n <= 100000) {
+            int minresult;
+            int count = 0;
+            ArrayList<Integer> a = new ArrayList<Integer>();
+            while (count <= n) {
+                int length = String.valueOf(count).length();
+                int sum = count;
+                ArrayList<Integer> c = new ArrayList<Integer>();
+                for (int i = 0; i < length; i++) {
+                    c.add(count / (int) Math.pow(10, length - 1 - i) % 10);
+                }
+//                for (int j = 0; j < c.size(); j++) {
+//                    sum += c.get(j);
+//                }
+                for (int j : c) {
+                    sum += j;
+                }
+                if (sum == n) {
+                    a.add(count);
+                }
+                count++;
+//                System.out.println(c);
+            }
+
+            int length = a.size();
+            for (int r = 0; r < length - 1; r++) {
+                for (int t = 0; t < length - 1 - r; t++) {
+                    if (a.get(t) > a.get(t + 1)) {
+                        int temp = a.get(t);
+                        a.remove(t);
+                        a.add(t, a.get(t + 1));
+                        a.remove(t + 1);
+                        a.add(t + 1, temp);
+                    }
+                }
+            }
+
+            if (a.size() != 0) {
+                System.out.println("最小" + a.get(0));
+
+            } else {
+                System.out.println("0");
+            }
+
+        } else {
+            System.out.println("输入非法！");
+        }
     }
 
 }
