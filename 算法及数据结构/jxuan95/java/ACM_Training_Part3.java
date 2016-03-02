@@ -247,7 +247,6 @@ public class ACM_Training_Part3 {
         int n = in.nextInt();
 
         if (n >= 1 && n <= 100000) {
-            int minresult;
             int count = 0;
             ArrayList<Integer> a = new ArrayList<Integer>();
             while (count <= n) {
@@ -294,5 +293,35 @@ public class ACM_Training_Part3 {
             System.out.println("输入非法！");
         }
     }
+
+    /**
+     * 例题3-5：生成元（效率更高的算法）
+     * P52
+     * 思路：先枚举出1到100000之间所有数和它的各个数字之和n，然后定义一个数组，该数组的n这个位置就存放那个数字i
+     */
+    public void example3_9_2() {
+        System.out.print("请输入一个数字：");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+
+        if (n >= 1 && n <= 100000) {
+            int max = 100000;
+            int[] array = new int[1000000];
+            for (int i = 0; i < max; i++) {
+                int x = i, y = i;
+                while (x > 0) {
+                    y += x % 10;
+                    x = x / 10;
+                }
+                if (array[y] == 0 || i < array[y]) {
+                    array[y] = i;
+                }
+            }
+            System.out.println(array[n]);
+        } else {
+            System.out.println("输入非法！");
+        }
+    }
+
 
 }
