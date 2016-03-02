@@ -389,5 +389,28 @@ public class ACM_Training_Part3 {
         }
     }
 
+    /**
+     * 习题3-1：得分
+     */
+    public void exercises3_1() {
+        System.out.println("请输入字符串：");
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
 
+        int slen = s.length();
+        int sum = 0;
+        char[] c = new char[slen];
+
+        for (int i = 0; i < slen; i++) {
+            c[i] = s.charAt(i);
+        }
+
+        for (int j = 0; j < slen; j++) {
+            if (c[j] == 'O' && c[j + 1] == 'O') {
+                sum = sum +j;
+            } else {
+
+            }
+        }
+    }
 }
