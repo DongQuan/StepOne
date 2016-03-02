@@ -1,5 +1,6 @@
 package jxuan95.java;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -330,5 +331,63 @@ public class ACM_Training_Part3 {
     public void example3_5() {
 
     }
+
+    /**
+     * 习题3-3：数数字问题
+     * P57
+     */
+    public void exercises3_3() {
+        System.out.print("请输入一个数字：");
+        Scanner in = new Scanner(System.in);
+        BigInteger n = in.nextBigInteger();
+        int[] array = new int[10];
+        for (int i = 0; i < 10; i++) {
+            array[i] = 0;
+        }
+
+        while (BigInteger.ZERO.compareTo(n) == -1) {
+//            int t = (n % 10);
+//            n /= 10;
+
+            int t = n.mod(BigInteger.TEN).intValue();
+            n = n.divide(BigInteger.TEN);
+            switch (t) {
+                case 0:
+                    array[0] += 1;
+                    break;
+                case 1:
+                    array[1] += 1;
+                    break;
+                case 2:
+                    array[2] += 1;
+                    break;
+                case 3:
+                    array[3] += 1;
+                    break;
+                case 4:
+                    array[4] += 1;
+                    break;
+                case 5:
+                    array[5] += 1;
+                    break;
+                case 6:
+                    array[6] += 1;
+                    break;
+                case 7:
+                    array[7] += 1;
+                    break;
+                case 8:
+                    array[8] += 1;
+                    break;
+                case 9:
+                    array[9] += 1;
+                    break;
+            }
+        }
+        for (int j = 0; j < array.length; j++) {
+            System.out.println(j + "次数:" + array[j]);
+        }
+    }
+
 
 }
