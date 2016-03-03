@@ -422,4 +422,57 @@ public class ACM_Training_Part3 {
 
         System.out.println(sum);
     }
+
+    /**
+     * 习题3-2：测算分子量
+     * P57
+     */
+    public void exercises3_2() {
+        System.out.println("请输入分子式：");
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+
+        int Cnum = 0, Hnum = 0, Onum = 0, Nnum = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (i + 1 < s.length() && Character.isDigit(s.charAt(i + 1))) {
+                System.out.println("数字");
+            }
+            switch (c) {
+                case 'C':
+                    if (i + 1 < s.length() && Character.isDigit(s.charAt(i + 1))) {
+                        Cnum += Integer.parseInt(String.valueOf(s.charAt(i + 1)));
+                    } else {
+                        Cnum += 1;
+                    }
+                    break;
+                case 'H':
+                    if (i + 1 < s.length() && Character.isDigit(s.charAt(i + 1))) {
+                        Hnum += Integer.parseInt(String.valueOf(s.charAt(i + 1)));
+                        System.out.println("here");
+                    } else {
+                        Hnum += 1;
+                    }
+                    break;
+                case 'O':
+                    if (i + 1 < s.length() && Character.isDigit(s.charAt(i + 1))) {
+                        Onum += Integer.parseInt(String.valueOf(s.charAt(i + 1)));
+                    } else {
+                        Onum += 1;
+                    }
+                    break;
+                case 'N':
+                    if (i + 1 < s.length() && Character.isDigit(s.charAt(i + 1))) {
+                        Nnum += Integer.parseInt(String.valueOf(s.charAt(i + 1)));
+                    } else {
+                        Nnum += 1;
+                    }
+                    break;
+
+            }
+        }
+        double sum = Cnum * 12.01 + 1.008 * Hnum + 16.00 * Onum + 14.01 * Nnum;
+        System.out.println(sum);
+    }
 }
