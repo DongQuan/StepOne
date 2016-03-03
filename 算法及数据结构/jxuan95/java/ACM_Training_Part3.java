@@ -475,4 +475,15 @@ public class ACM_Training_Part3 {
         double sum = Cnum * 12.01 + 1.008 * Hnum + 16.00 * Onum + 14.01 * Nnum;
         System.out.println(sum);
     }
+
+    /**
+     * 习题3-4：周期串
+     * P57
+     */
+    public void exercises3_4() {
+        System.out.println("请输入一个字符串：");
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+    }
+
 }
