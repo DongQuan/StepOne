@@ -399,6 +399,8 @@ public class ACM_Training_Part3 {
 
         int slen = s.length();
         int sum = 0;
+        int t = 1;
+
         char[] c = new char[slen];
 
         for (int i = 0; i < slen; i++) {
@@ -406,11 +408,18 @@ public class ACM_Training_Part3 {
         }
 
         for (int j = 0; j < slen; j++) {
-            if (c[j] == 'O' && c[j + 1] == 'O') {
-                sum = sum +j;
-            } else {
 
+            if (c[j] == 'O' && j + 1 < slen && c[j + 1] == 'O') {
+                sum += t;
+                t++;
+            } else if (c[j] == 'O') {
+                sum += t;
+            } else {
+                sum += 0;
+                t = 1;
             }
         }
+
+        System.out.println(sum);
     }
 }
