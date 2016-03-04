@@ -484,6 +484,7 @@ public class ACM_Training_Part3 {
         System.out.println("请输入一个字符串：");
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
+
     }
 
 }
