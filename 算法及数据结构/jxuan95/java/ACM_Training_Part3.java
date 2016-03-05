@@ -485,6 +485,9 @@ public class ACM_Training_Part3 {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
 
+    
     }
+
+
 
 }
