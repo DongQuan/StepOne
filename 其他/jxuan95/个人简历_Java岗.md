@@ -35,7 +35,8 @@
   - 了解MySql数据库，能够写出常用SQL语句；
 
 - 其他技能：
-  - 能够使用Google、StackOverflow、Github等解决开发中的问题，有自己的github仓库；
+  - 理解常用数据结构和算法；
+  - 能够使用Google、StackOverflow、Github等解决开发中的问题，有一定的英语能力，有自己的github仓库；
   - 长期使用Linux(Ubuntu)进行项目开发，了解Linux系统常用命令；
   - 能够配置Tomcat服务器，然后进行项目部署；
   
