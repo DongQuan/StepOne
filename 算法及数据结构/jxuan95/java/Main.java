@@ -41,7 +41,10 @@ public class Main {
 //        acmTrainingPart3.example3_9_2();
 //        acmTrainingPart3.exercises3_3();
 //        acmTrainingPart3.exercises3_1();
-        acmTrainingPart3.exercises3_2();
+//        acmTrainingPart3.exercises3_2();
+
+        ACM_Training_Part_4 acmTrainingPart4 = new ACM_Training_Part_4();
+
     }
 }
 
