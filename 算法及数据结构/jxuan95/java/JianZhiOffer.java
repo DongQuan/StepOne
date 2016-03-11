@@ -17,7 +17,7 @@ public class JianZhiOffer {
         int i = 0;
         while (i < row) {
             for (int j = 0; j < list; j++) {
-                if(array[i][j]==target){
+                if (array[i][j] == target) {
                     System.out.println(array[i][j]);
                     return true;
                 }
@@ -26,4 +26,25 @@ public class JianZhiOffer {
         }
         return false;
     }
+
+    /**
+     * 替换空格
+     * 请实现一个函数，将一个字符串中的空格替换成“%20”。
+     * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
+     */
+    public String replaceSpace(StringBuffer str) {
+        int length = str.length();
+        String string = "";
+        for (int i = 0; i < length; i++) {
+            if (Character.isWhitespace(str.charAt(i))) {
+                string += "%20";
+            } else {
+                string += str.charAt(i);
+            }
+        }
+        System.out.println(string);
+        return string;
+    }
+
+
 }

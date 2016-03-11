@@ -45,6 +45,8 @@ public class Main {
 
         ACM_Training_Part_4 acmTrainingPart4 = new ACM_Training_Part_4();
 
+        JianZhiOffer jianZhiOffer = new JianZhiOffer();
+        jianZhiOffer.replaceSpace(new StringBuffer("   "));
     }
 }
 
