@@ -36,3 +36,7 @@
             });
             return uuid;
         };
+        
+3. JavaScript中document.getElementById的返回值的类型为Object
+
+4.
