@@ -1,5 +1,8 @@
 package jxuan95.java;
 
+import java.util.*;
+import java.lang.*;
+
 /**
  * Created by jxuan on 16-3-11.
  * 牛客网剑指offer习题
@@ -48,18 +51,24 @@ public class JianZhiOffer {
 
     /**
      * 输入一个链表，从尾到头打印链表每个节点的值。
-     * public class Solution {
-        ArrayList<Integer> arrayList=new ArrayList<Integer>();
-        public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+     */
+    ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
-        if(listNode!=null){
-        this.printListFromTailToHead(listNode.next);
-        arrayList.add(listNode.val);
+    public class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        if (listNode != null) {
+            this.printListFromTailToHead(listNode.next);
+            arrayList.add(listNode.val);
         }
         return arrayList;
-        }
-        }
-     */
+    }
 
-    
 }
