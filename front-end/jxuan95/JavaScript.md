@@ -36,3 +36,7 @@
             });
             return uuid;
         };
+        
+3. JavaScript中document.getElementById的返回值的类型为Object
+
+4. 在Internet上浏览时，浏览器和WWW服务器之间传输网页使用的协议是HTTP
