@@ -1,5 +1,5 @@
 #目录
-[kl](#klx)
+[kl](#user-content-klx)
 
 1.当捕获异常时, 使用 as 而不要用逗号. 例如
 
