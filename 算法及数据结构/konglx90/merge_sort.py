@@ -16,3 +16,9 @@ def merge_sort(lst):
     left = merge_sort(lst[:middle])
     right = merge_sort(lst[middle:])
     return merge(left, right)
+
+if __name__ == "__main__":
+    from random import randint
+    ls = [randint(0, 120) for i in range(50)]
+    print ls
+    print merge_sort(ls)
