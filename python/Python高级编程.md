@@ -63,6 +63,10 @@ yield指令，可以暂停一个函数并返回中间结果。使用该指令的
 yield 的语法糖， 相对于列表推导式来说把方括号变为了圆括号
 ```iter = (i for i in range(10) if i % 2 == 0)```
 
+是否为空字符
+
+    i != " "
+
 [协同程序](http://blog.csdn.net/yueguanghaidao/article/details/10201327)
 
 
