@@ -51,6 +51,8 @@ public class Main {
 //        Arithmetic_Sort2.insertSort(a);
 //        Arithmetic_Sort2.bubbleSort(a);
 //        Arithmetic_Sort2.selectSort(a);
+
+        System.out.println(JianZhiOffer.JumpFloor(10));
     }
 }
 

@@ -98,4 +98,54 @@ public class JianZhiOffer {
         return stack2.pop();
 
     }
+
+    /**
+     * 一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+     * 1.假设当有n个台阶时假设有f(n)种走法。
+     * 2.青蛙最后一步要么跨1个台阶要么跨2个台阶。
+     * 3.当最后一步跨1个台阶时即之前有n-1个台阶，根据1的假设即n-1个台阶有f(n-1)种走法。
+     * 4. 当最后一步跨1个台阶时即之前有n-2个台阶，根据1的假设即n-2个台阶有f(n-2 )种走法。
+     * 5.显然n个台阶的走法等于前两种情况的走法之和即f(n)=f(n-1)+f(n-2)。
+     * 6.找出递推公式后要找公式出口，即当n为1、2时的情况，显然n=1时f(1)等于1，f(2)等于2
+     * 7.         | 1, (n=1)
+     * f(n) =  |2, (n=2)
+     * | f(n-1)+f(n-2) ,(n>2,n为整数)
+     */
+    public static int JumpFloor(int target) {
+        if (target <= 0) {
+            return -1;
+        } else if (target == 1) {
+            return 1;
+        } else if (target == 2) {
+            return 2;
+        } else {
+            return JumpFloor(target - 1) + JumpFloor(target - 2);
+        }
+    }
+
+
+    /**
+     * 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项。
+     * @param n 传入n
+     * @return 返回第n项
+     */
+    public static int Fibonacci(int n) {
+        int[] a = new int[n + 1];
+
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        }
+
+        a[0] = 0;
+        a[1] = 1;
+        for (int i = 1; i + 1 <= n; i++) {
+            a[i + 1] = a[i - 1] + a[i];
+        }
+
+
+        return a[n];
+
+    }
 }
