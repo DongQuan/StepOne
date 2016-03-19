@@ -21,7 +21,7 @@ public class Arithmetic_Sort {
             temp = array[i];
             int j = i - 1;
             for (; j >= 0 && temp < array[j]; j--) {
-                array[j + 1] = array[j];
+                array[j + 1] = array[j]; //后移一个位置
             }
             array[j + 1] = temp;
         }

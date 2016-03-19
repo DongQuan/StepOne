@@ -46,7 +46,11 @@ public class Main {
         ACM_Training_Part_4 acmTrainingPart4 = new ACM_Training_Part_4();
 
         JianZhiOffer jianZhiOffer = new JianZhiOffer();
-        jianZhiOffer.replaceSpace(new StringBuffer("   "));
+//        jianZhiOffer.replaceSpace(new StringBuffer("   "));
+
+//        Arithmetic_Sort2.insertSort(a);
+//        Arithmetic_Sort2.bubbleSort(a);
+//        Arithmetic_Sort2.selectSort(a);
     }
 }
 
