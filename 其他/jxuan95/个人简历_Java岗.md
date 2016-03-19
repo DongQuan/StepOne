@@ -3,7 +3,7 @@
 
 # 个人信息
 
-- 姓名：蒋翾(xuan)　　　　
+- 姓名：蒋翾　　　　
 - 性别：男
 - 手机：18982160107　　　
 - Email：xuanmail95@163.com
@@ -13,7 +13,7 @@
 
 # 求职意向
 
-- 研发工程师 Java
+- 后端开发工程师(Java)
 
 ---
 
@@ -24,21 +24,20 @@
 ---
 
 # 技能清单
-
+- Java：
+  - 熟悉Java这门语言，有使用Spring、SpringMVC、MyBatis进行后台开发的经验；
+  - 了解MySql数据库，能够写出常用SQL语句；
+  
 - Web前端：
   - 能够熟练使用HTML标签和CSS样式，了解JavaScript语言；
   - 有jQuery、Bootstrap以及模板引擎Mustache的使用经验；
   - 能够使用Ajax进行异步请求和页面渲染，能够对页面进行响应式处理；
   
-- Java：
-  - 熟悉Java这门语言，有使用Spring、SpringMVC、MyBatis进行后台开发的经验；
-  - 了解MySql数据库，能够写出常用SQL语句；
-
 - 其他技能：
   - 理解常用数据结构和算法；
   - 能够使用Google、StackOverflow、Github等解决开发中的问题，有一定的英语能力，有自己的github仓库；
   - 长期使用Linux(Ubuntu)进行项目开发，熟悉Linux系统常用命令；
-  - 能够配置Tomcat服务器，然后进行项目部署；
+  - 能够配置Tomcat服务器，进行项目部署；
   - 了解常用网络协议；
   
 ---
