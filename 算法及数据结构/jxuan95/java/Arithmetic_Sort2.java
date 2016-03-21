@@ -185,4 +185,43 @@ public class Arithmetic_Sort2 {
         System.out.println(Arrays.toString(b));
     }
 
+    /**
+     * 桶排序
+     */
+    public static void bucketSort(int[] a) {
+        int max = 0;
+        int length = a.length;
+        int m = 0;
+        int[] array = new int[length];
+
+        for (int i : a) {
+            if (i > max) max = i;
+        }
+
+        int[] bucket = new int[2*max];
+
+        //开头为零和重复数据都可以完美排序
+        for (int i = 0; i < length; i++) {
+            if (a[i] == 0) {
+                array[m] = 0;
+                m++;
+            } else if (bucket[a[i]] == a[i]) {
+                for (int j = i; j < length; j++) {
+                    bucket[a[j] + 2] = bucket[a[j] + 1];
+                }
+                bucket[a[i] + 1] = a[i];
+            } else {
+                bucket[a[i]] = a[i];
+            }
+        }
+        System.out.println(Arrays.toString(bucket));
+        if (m < length)
+            for (int k = 0; k < bucket.length; k++) {
+                if (bucket[k] != 0) {
+                    array[m++] = bucket[k];
+                }
+            }
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(array));
+    }
 }
