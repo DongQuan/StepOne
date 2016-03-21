@@ -52,7 +52,9 @@ public class Main {
 //        Arithmetic_Sort2.bubbleSort(a);
 //        Arithmetic_Sort2.selectSort(a);
 
-        System.out.println(JianZhiOffer.JumpFloor(10));
+//        System.out.println(JianZhiOffer.JumpFloor(10));
+//        Arithmetic_Sort2.testFor(a);
+        Arithmetic_Sort2.mergeSort(a);
     }
 }
 
