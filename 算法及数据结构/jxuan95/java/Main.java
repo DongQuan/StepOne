@@ -54,7 +54,8 @@ public class Main {
 
 //        System.out.println(JianZhiOffer.JumpFloor(10));
 //        Arithmetic_Sort2.testFor(a);
-        Arithmetic_Sort2.mergeSort(a);
+//        Arithmetic_Sort2.mergeSort(a);
+        Arithmetic_Sort2.quickSort(a,0,a.length-1);
     }
 }
 

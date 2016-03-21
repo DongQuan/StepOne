@@ -118,4 +118,36 @@ public class Arithmetic_Sort2 {
             System.out.println(a[i]);
         }
     }
+
+    public static void quickSort(int[] a, int start, int end) {
+
+        if (start < end) {
+            int i = start;
+            int j = end;
+            int temp = a[start];
+
+            while (i < j) {
+                while (i < j && a[j] >= temp) {
+                    j--;
+                }
+                if (i < j) {
+                    a[i] = a[j];
+                    i++;
+                }
+                while (i < j && a[i] <= temp) {
+                    i++;
+                }
+                if (i < j) {
+                    a[j] = a[i];
+                    j--;
+                }
+            }
+            a[i] = temp;
+
+            quickSort(a, start, i - 1);
+            quickSort(a, i + 1, end);
+            System.out.println(Arrays.toString(a));
+        }
+    }
+
 }
