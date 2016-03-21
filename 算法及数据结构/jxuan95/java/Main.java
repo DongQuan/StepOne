@@ -57,7 +57,7 @@ public class Main {
 //        Arithmetic_Sort2.mergeSort(a);
 //        Arithmetic_Sort2.quickSort(a,0,a.length-1);
 //        Arithmetic_Sort2.countSort(a);
-        Arithmetic_Sort2.bucketSort(a);
+//        Arithmetic_Sort2.bucketSort(a);
     }
 }
 
