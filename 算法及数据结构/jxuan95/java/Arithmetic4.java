@@ -30,7 +30,6 @@ public class Arithmetic4 {
             System.out.println(c + "x");
         }
     }
-
     public static double getT(int x1, int y1, int x0, int y0, int r) {
         return Math.sqrt(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2)) - r;
     }
