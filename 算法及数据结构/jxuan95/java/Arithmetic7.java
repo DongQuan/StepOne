@@ -8,8 +8,11 @@ public class Arithmetic7 {
     public static void main(String[] args) {
 
         int[] orderlyArray = new int[]{1, 2, 5, 8, 9, 77, 111, 333, 555, 666};
-        System.out.println(BinSearch(orderlyArray, 0, orderlyArray.length, 9));
+//        System.out.println(BinSearch(orderlyArray, 0, orderlyArray.length, 9));
 
+        int[] a = new int[]{2, 2, 1, 2, 2, 2};
+        int[] b = new int[]{};
+        System.out.println(minNumberInRotateArray(b));
     }
 
     //二分查找
@@ -26,4 +29,23 @@ public class Arithmetic7 {
         }
         return -1;
     }
+
+    //旋转数组的最小数字
+    public static int minNumberInRotateArray(int[] array) {
+        int length = array.length;
+        if (length != 0) {
+            int minNum = array[0];
+            for (int i = 0; i < length; i++) {
+                if (array[i] <= minNum) {
+                    minNum = array[i];
+                }
+            }
+
+            return minNum;
+        } else {
+            return 0;
+        }
+
+    }
+
 }
