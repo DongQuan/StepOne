@@ -1,5 +1,5 @@
 var i = 0;
-function count() {
+
+exports.test = function count() {
     return ++i;
-}
-exports.count = count;
+};
