@@ -9,9 +9,10 @@ import java.util.Scanner;
 public class P2002 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        final double PI = 3.1415927;
         while (in.hasNext()) {
             double r = in.nextDouble();
-            double v = (Math.PI * Math.pow(r, 3) * 4) / 3;
+            double v = (PI * Math.pow(r, 3) * 4) / 3;
             System.out.printf("%.3f", v);
             System.out.println();
         }
