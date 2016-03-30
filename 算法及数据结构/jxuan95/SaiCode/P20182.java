@@ -19,6 +19,7 @@ public class P20182 {
         }
         while (in.hasNext()) {
             int n = in.nextInt();
+            if (n == 0) continue;
             System.out.println(a[n]);
         }
     }
