@@ -9,12 +9,12 @@ import java.util.Scanner;
 public class P20182 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int[] a = new int[56];
+        int[] a = new int[1000];
         a[1] = 1;
         a[2] = 2;
         a[3] = 3;
         a[4] = 4;
-        for (int i = 4; i < 56; i++) {
+        for (int i = 4; i < 1000; i++) {
             a[i] = a[i - 1] + a[i - 3];
         }
         while (in.hasNext()) {
