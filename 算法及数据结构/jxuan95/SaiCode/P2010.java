@@ -16,11 +16,15 @@ public class P2010 {
             int n = in.nextInt();
             int num = 0;
             for (; m <= n; m++) {
-                if (m == (Math.pow(m % 10, 3) + Math.pow((m / 10) % 10, 3) + Math.pow((m / 100) % 10, 3))) {
+                if (m < n && m == (Math.pow(m % 10, 3) + Math.pow((m / 10) % 10, 3) + Math.pow((m / 100) % 10, 3))) {
                     System.out.print(m + " ");
+                    num++;
+                } else if (m == (Math.pow(m % 10, 3) + Math.pow((m / 10) % 10, 3) + Math.pow((m / 100) % 10, 3))) {
+                    System.out.println(m);
                     num++;
                 }
             }
+
             if (num == 0) {
                 System.out.println("no");
             }
