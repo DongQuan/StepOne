@@ -17,15 +17,54 @@ public class HDU1166 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
-            int T = in.nextInt();
-            int N = in.nextInt();
-            int[] a = new int[N];
-
-            for (int i = 0; i < N; i++) {
-                a[i] = in.nextInt();
+            lab:
+            {
+                int T = in.nextInt();
+                while (in.hasNext() && T > 0) {
+                    first:
+                    {
+                        int N = in.nextInt();
+                        int[] a = new int[N];
+                        for (int i = 0; i < N; i++) {
+                            a[i] = in.nextInt();
+                        }
+                        System.out.println("Case" + " " + T + ":");
+                        T--;
+                        while (in.hasNext()) {
+                            jixu:
+                            {
+                                String comm = in.next();
+                                switch (comm) {
+                                    case ("Query"):
+                                        int i = in.nextInt();
+                                        int j = in.nextInt();
+                                        int sum = 0;
+                                        for (int c = i - 1; c < j; c++) {
+                                            sum += a[c];
+                                        }
+                                        System.out.println(sum);
+                                        break jixu;
+                                    case ("Add"):
+                                        int q = in.nextInt();
+                                        int w = in.nextInt();
+                                        a[q - 1] += w;
+                                        break jixu;
+                                    case ("Sub"):
+                                        int e = in.nextInt();
+                                        int r = in.nextInt();
+                                        a[e - 1] -= r;
+                                        break jixu;
+                                    case ("End"):
+                                        break first;
+                                }
+                            }
+                        }
+                        if (T == 1) {
+                            break lab;
+                        }
+                    }
+                }
             }
-
-
         }
     }
 }
