@@ -28,14 +28,76 @@
 
 <input type="text" value="dian" id="asd"/>
 
+<div id="div">
+    <span id="span">
+        <a id="aTag">事件测试</a>
+    </span>
+</div>
+
+<a href="#" id="alink" target="_blank">打开新连接</a>
+
+<img id="pic" src="../js/pic.jpg"/>
+
 <script type="text/javascript">
 
-    var tem = function () {
-        alert("t");
-    };
+//    var pic = document.getElementById("pic");
+//    pic.addEventListener('load',hasload,false);
+//
+//    function hasload(e){
+//        console.log(e);
+//        alert("load");
+//    }
 
-    var asd = document.getElementById("asd");
-    asd.addEventListener("mouseover", tem, false);
+//    var btn = document.getElementById("btn");
+//    btn.onclick = function(event){
+//        alert("1");
+//        event.stopPropagation();
+//    };
+
+//    document.getElementById("div").addEventListener('click',div,true);
+
+//    document.body.onclick = function(event){
+//        alert("body");
+//    };
+
+//    var alink = document.getElementById("alink");
+//    alink.onclick = function (e) {
+//        console.log(e);
+//        e.preventDefault();
+//    };
+
+    //    var btn = document.getElementById("btn");
+    //    btn.addEventListener('click', function (e) {
+    //        alert(this.id);
+    //    }, false);
+
+    //    var btn = document.getElementById("btn");
+    //    btn.onclick = function () {
+    //        alert(this.id);
+    //    };
+    //    document.getElementById("div").addEventListener('click',div,true);
+    //    document.getElementById("aTag").addEventListener('click',aTag,true);
+    //    document.getElementById("span").addEventListener('click',span,true);
+
+    //    document.getElementById("aTag").addEventListener('click', aTag);
+    //    document.getElementById("span").addEventListener('click', span);
+    //    document.getElementById("div").addEventListener('click', div);
+    function aTag(e) {
+        alert("点击的是a标签");
+    }
+    function span(e) {
+        alert("点击的是span标签");
+    }
+    function div(e) {
+        alert("点击的是div标签");
+    }
+
+    //    var tem = function () {
+    //        alert("t");
+    //    };
+    //
+    //    var asd = document.getElementById("asd");
+    //    asd.addEventListener("mouseover", tem, false);
 
     //    var te = function () {
     //        alert("submit");
