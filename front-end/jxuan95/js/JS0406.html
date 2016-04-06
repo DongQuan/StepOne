@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<h1>Hello World</h1>
+
+<p>Welcome to Index</p>
+
+<input type='text' id='inp' value="lalala"/>
+
+<input type="checkbox" value="ccc"/>
+<input type="checkbox" value="bbb"/>
+<input type="checkbox" value="aaa"/>
+
+<button onclick="clc()"></button>
+
+<div id='ddd'>
+</div>
+
+<button id="btn">按钮</button>
+
+<form action="#">
+    <input type="submit" class="btn btn-default">
+</form>
+
+<input type="text" value="dian" id="asd"/>
+
+<script type="text/javascript">
+
+    var tem = function () {
+        alert("t");
+    };
+
+    var asd = document.getElementById("asd");
+    asd.addEventListener("mouseover", tem, false);
+
+    //    var te = function () {
+    //        alert("submit");
+    //    };
+    //
+    //
+    //    document.addEventListener('submit', te, false);
+
+    //    var dom = document.getElementById("btn");
+    //    var dw = function () {
+    //        alert("dw");
+    //    };
+
+    //兼容性
+    //    function addEvent(elm, evType, fn, useCapture) {
+    //        if (elm.addEventListener) {
+    //            elm.addEventListener(evType, fn, useCapture);
+    //            return true;
+    //        } else if (elm.attachEvent()) {
+    //            //IE5+
+    //            return elm.attachEvent("on" + evType, fn);
+    //        } else {
+    //            elm['on' + evType] = fn;
+    //        }
+    //    }
+
+    //    dom.addEventListener("click", dw, false);
+    //    dom.addEventListener("click", dw, false);
+    //    dom.addEventListener("click", dw, false);
+
+    //        dom.onclick = clc;
+    //    dom.attachEvent("onclick", dw);
+    //    dom.attachEvent("onclick", dw);
+    //    dom.attachEvent("onclick", dw);
+
+    //
+    //    function clc() {
+    //        alert("被点击");
+    //    }
+
+    //    var ele = document.getElementById('ddd');
+    //    ele.innerHTML = "asdf";
+    //    ele.style.color = "#eeeeee";
+
+    // var a = [];
+    // if(Array.isArray()==='undefined'){
+    //     Array.isArray = function(arg){
+    //         return Object.prototype.toString.call(arg)==="[object Array]"
+    //     };
+    // }
+    // alert(Array.isArray(a));
+
+    // var inp = document.getElementById("inp");
+    // var val = inp.value;
+    // alert(val);
+
+    // var chelist = document.getElementsByTagName('input');
+    // var checkboxList = [];
+    // var len = chelist.length;
+    // while(len--){
+    //     if(chelist[len].type=='checkbox'){
+    //         checkboxList.push(chelist[len]);
+    //     }
+    // }
+    // console.log(checkboxList);
+</script>
+</body>
+</html>
