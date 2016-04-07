@@ -47,36 +47,63 @@
     <li><a href="http://www.yahoo.com">Yahoo!</a></li>
 </ul>
 
+<button class="btn" value="33" id="b2" WI="ff">按钮</button>
+<div id="testin">
+    <p id="inn"></p>
+
+</div>
 
 <script type="text/javascript">
 
-    var isSupported = ("onhashchange" in window);
-    alert(isSupported);
-
-    window.addEventListener("hashchange",function(e){
-        console.log(e);
-        alert(location.hash);
-    });
-
-//    window.addEventListener("beforeunload",function(e){
-//        var message = "离开？";
-//        e.returnValue = message;
-//        return message;
-//    },false);
-
-//    var div = document.getElementById("myDiv");
+//    var inn = document.getElementById("inn");
+//    inn.innerHTML = "aaa";
+//    var s = document.createElement("script");
+//    s.setAttribute("src", "eee");
+//    var testin = document.getElementById("testin");
+//    testin.insertBefore(s, inn);
 //
-//    div.addEventListener('contextmenu', function (e) {
-//        e.preventDefault();
-//        var menu = document.getElementById("myMenu");
-//        menu.style.left = e.clientX + "px";
-//        menu.style.top = e.clientY + "px";
-//        menu.style.visibility = "visible";
-//    }, false);
+//    s.parentNode.removeChild(s);
 //
-//    document.addEventListener('click', function (e) {
-//        document.getElementById("myMenu").style.visibility = "hidden";
-//    }, false);
+//    var frag = document.createDocumentFragment();
+////    var n = 5;
+//    while (inn.lastChild) {
+//        frag.appendChild(inn.lastChild);
+//    }
+//    inn.appendChild(frag);
+
+
+    //    var b2 = document.getElementById("b2");
+    //    b2.setAttribute("lalala","ffff");
+    //    var v = b2.getAttribute("lalala");
+    //    alert(v);
+
+    //    var isSupported = ("onhashchange" in window);
+    //    alert(isSupported);
+    //
+    //    window.addEventListener("hashchange",function(e){
+    //        console.log(e);
+    //        alert(location.hash);
+    //    });
+
+    //    window.addEventListener("beforeunload",function(e){
+    //        var message = "离开？";
+    //        e.returnValue = message;
+    //        return message;
+    //    },false);
+
+    //    var div = document.getElementById("myDiv");
+    //
+    //    div.addEventListener('contextmenu', function (e) {
+    //        e.preventDefault();
+    //        var menu = document.getElementById("myMenu");
+    //        menu.style.left = e.clientX + "px";
+    //        menu.style.top = e.clientY + "px";
+    //        menu.style.visibility = "visible";
+    //    }, false);
+    //
+    //    document.addEventListener('click', function (e) {
+    //        document.getElementById("myMenu").style.visibility = "hidden";
+    //    }, false);
 
 
     //    var btn = document.getElementById("btn");
