@@ -36,17 +36,54 @@
 
 <a href="#" id="alink" target="_blank">打开新连接</a>
 
-<img id="pic" src="../js/pic.jpg"/>
+<!--<img id="pic" src="../js/pic.jpg"/>-->
+
+<div id="myDiv">Right click or Ctrl+click me to get a custom context menu.Click anywhere else to get the default context
+    menu.
+</div>
+<ul id="myMenu" style="position:absolute;visibility:hidden;background-color:silver">
+    <li><a href="http://www.nczonline.net">Nicholas’ site</a></li>
+    <li><a href="http://www.wrox.com">Wrox site</a></li>
+    <li><a href="http://www.yahoo.com">Yahoo!</a></li>
+</ul>
+
 
 <script type="text/javascript">
 
+    var isSupported = ("onhashchange" in window);
+    alert(isSupported);
 
-
-    var btn = document.getElementById("btn");
-    btn.addEventListener('mousedown', function (e) {
+    window.addEventListener("hashchange",function(e){
         console.log(e);
-        alert("双击");
-    }, false);
+        alert(location.hash);
+    });
+
+//    window.addEventListener("beforeunload",function(e){
+//        var message = "离开？";
+//        e.returnValue = message;
+//        return message;
+//    },false);
+
+//    var div = document.getElementById("myDiv");
+//
+//    div.addEventListener('contextmenu', function (e) {
+//        e.preventDefault();
+//        var menu = document.getElementById("myMenu");
+//        menu.style.left = e.clientX + "px";
+//        menu.style.top = e.clientY + "px";
+//        menu.style.visibility = "visible";
+//    }, false);
+//
+//    document.addEventListener('click', function (e) {
+//        document.getElementById("myMenu").style.visibility = "hidden";
+//    }, false);
+
+
+    //    var btn = document.getElementById("btn");
+    //    btn.addEventListener('mousedown', function (e) {
+    //        console.log(e);
+    //        alert("双击");
+    //    }, false);
 
     //    var pic = document.getElementById("pic");
     //    pic.addEventListener('load',hasload,false);
@@ -90,15 +127,15 @@
     //    document.getElementById("aTag").addEventListener('click', aTag);
     //    document.getElementById("span").addEventListener('click', span);
     //    document.getElementById("div").addEventListener('click', div);
-    function aTag(e) {
-        alert("点击的是a标签");
-    }
-    function span(e) {
-        alert("点击的是span标签");
-    }
-    function div(e) {
-        alert("点击的是div标签");
-    }
+    //    function aTag(e) {
+    //        alert("点击的是a标签");
+    //    }
+    //    function span(e) {
+    //        alert("点击的是span标签");
+    //    }
+    //    function div(e) {
+    //        alert("点击的是div标签");
+    //    }
 
     //    var tem = function () {
     //        alert("t");
