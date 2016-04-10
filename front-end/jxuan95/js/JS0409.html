@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<p>Welcome to Index</p>
+
+<button class="btn" id="btn">XML</button>
+<div style="display:inline-block">aaa</div>
+<script type="text/javascript">
+//    //创建一个新的匿名函数，作为包装
+//    (function(){
+//        //变量原本应该是全局的
+//        var msg = "test";
+//        //将一个新函数绑定到全局对象
+//        window.onunload = function(){
+//            //这个函数使用了隐藏的msg
+//            alert(msg);
+//        };
+//        //关闭匿名函数并执行
+//    })();
+
+//    //数字求和函数的函数生成器
+//    function addGenerator(num) {
+//        //返回一个简单的函数，求两个数字的和，其中第一个数字来自生成器
+//        return function (toAdd) {
+//            return num + toAdd
+//        };
+//    }
+//    //addFive现在包含一个接受单一参数的函数，这个函数能求得5加上该参数的和
+//    var addFive = addGenerator(5);
+//
+//    console.log(addFive(4));//输出9
+
+
+    //检查数字实际上是否为字符串
+    //    if (num.constructor == String) {
+    //        //如果是，则把字符串解析为整数
+    //        num = parseInt(num);
+    //    }
+
+    //检查字符串实际上是否为数组
+    //    var str = ["aa", "bb", "cc"];
+    //    if (str.constructor == Array) {
+    //        //如果是，则根据数组用逗号归并出字符串来
+    //        str = str.join(',');
+    //    }
+    //    console.log(str);
+
+    //    console.log(isEventSupported("click"));
+    //
+    //    function isEventSupported(eventName) {
+    //        //创建一个div用于测试，通常各个事件都可以冒泡到div上来，包括change和submit
+    //        var element = document.createElement("div"), isSupported;
+    //
+    //        eventName = "on" + eventName;
+    //        isSupported = (eventName in element);//检测元素是否有一个属性表示该事件
+    //
+    //        //如果检测到没有这个属性，那就创建一个ontype并插入一点代码，然后判断该元素是否可以将其转换为一个函数
+    //        //如果转换为一个函数，说明该元素知道如何解释冒泡事件
+    //        if (!isSupported) {
+    //            element.setAttribute(eventName, "return;");
+    //            isSupported = typeof element[eventName] == 'function';
+    //        }
+    //        element = null;//删除临时元素
+    //        return isSupported;
+    //    }
+
+    //    var table = document.getElementById("#someTable");
+    //    addEvent(table, "click", function (event) {
+    //        if (event.target.tagName.toLowerCase() == "td") {
+    //            event.target.style.backgroundColor = "yellow";
+    //        }
+    //    });
+
+    //    var cells = document.getElementsByTagName("td");
+    //    for (var n = 0; n < cells.length; n++) {
+    //        addEvent(cells[n], "click", function () {
+    //            this.style.backgroundColor = "yellow";
+    //        });
+    //    }
+
+    //    if (document.addEventListener) {
+    //        this.addEvent = function (elem, type, fn) {
+    //            elem.addEventListener(type, fn, false);//false表示在冒泡阶段处理
+    //            return fn;
+    //        };
+    //
+    //        this.removeEvent = function (elem, type, fn) {//DOM解绑函数
+    //            elem.removeEventListener(type, fn, false);
+    //        }
+    //    } else if (document.attachEvent) {//检测是否支持IE
+    //        this.addEvent = function (elem, type, fn) {
+    //            var bound = function () {
+    //                return fn.apply(elem, arguments);//改变上下文
+    //            };
+    //            elem.attachEvent("on" + type, bound);
+    //            return bound;
+    //        };
+    //
+    //        this.removeEvent = function (elem, type, fn) {
+    //            elem.detachEvent("on" + type, fn);
+    //        }
+    //    }
+
+    //    function fetchComputedStyle(element, property) {//定义新函数
+    //        if (window.getComputedStyle) {
+    //            var computedStyles = window.getComputedStyle(element);//获取接口
+    //
+    //            if (computedStyles) {
+    //                property = property.replace(/[A-z]/g, '-$1').toLowerCase();//获取样式值
+    //                return computedStyles.getPropertyValue(property);
+    //            }
+    //        } else if (element.currentStyle) {//使用专有方式，IE浏览器
+    //            property = property.replace(/-([a-z])/ig, function (all, letter) {
+    //                return letter.toUpperCase();
+    //            });
+    //            return element.currentStyle[property];
+    //        }
+    //    }
+    //
+    //    window.onload = function () {
+    //        var div = document.getElementsByTagName("div")[0];
+    //        console.log(fetchComputedStyle(div, "display"));
+    //    };
+
+    //    var div = document.createElement("div");
+    //    div.setAttribute("style", "opacity:0.5");
+    //    var OPACITY_SUPPORTED = div.style.opacity === "0.5";
+    //    console.log(OPACITY_SUPPORTED);
+
+    //    var use = "other";
+    //    var katana = {
+    //        isSharp: true,
+    //        use: function () {
+    //            this.isSharp != this.isSharp;
+    //        }
+    //    };
+    //    with (katana) {
+    //        console.log(use !== "other" && typeof use == "function");
+    //        console.log(this !== katana);
+    //    }
+    //
+    //    console.log(use === "other");
+    //    console.log(typeof isSharp === "undefined");
+
+    //    var json = '{"name":"Ninja"}';
+    //    var object = eval("(" + json + ")");
+    //    console.log(object);
+
+
+    //    var add = new Function("a", "b", "return a + b;");
+    //    console.log(add(3, 4));
+
+    //    console.log(eval("5+5") == 10);
+    //    console.log(eval("3+4;5+6"));
+</script>
+</body>
+</html>
