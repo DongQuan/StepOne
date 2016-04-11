@@ -17,21 +17,50 @@
 <div id="main"></div>
 <script type="text/javascript">
 
-    var outter = function () {
-        var x = 0;
-        return function () {
-            return x++;
+    function factorial(n) {
+        if (equal(n, 1)) {
+            return 1;
+        } else {
+            return mul(n, factorial(dec(n)));
         }
-    };
+    }
 
-    var a = outter();
-    console.log(a());//0
-    console.log(a());//1
-    console.log(a());//2
+    //    //阶乘
+    //    function factorial(n) {
+    //        if (n == 1) {
+    //            return 1;
+    //        } else {
+    //            return n * factorial(n - 1);
+    //        }
+    //    }
 
-    var b = outter();
-    console.log(b());//0
-    console.log(b());//1
+    //    var adder = function (num) {
+    //        return function (y) {
+    //            return num + y;
+    //        }
+    //    };
+    //
+    //    var inc = adder(1);
+    //    var dec = adder(-1);
+    //
+    //    console.log(inc(99));//100
+    //    console.log(dec(101));//100
+
+    //    var outter = function () {
+    //        var x = 0;
+    //        return function () {
+    //            return x++;
+    //        }
+    //    };
+    //
+    //    var a = outter();
+    //    console.log(a());//0
+    //    console.log(a());//1
+    //    console.log(a());//2
+    //
+    //    var b = outter();
+    //    console.log(b());//0
+    //    console.log(b());//1
 
 
     //    function Person(name) {
