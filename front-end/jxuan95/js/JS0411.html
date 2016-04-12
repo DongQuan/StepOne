@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<p>Welcome to Index</p>
+
+<div id="main"></div>
+<script type="text/javascript">
+
+    /*BicycleShop class.*/
+    var BicycleShop = function () {
+
+    };
+
+    BicycleShop.prototype = {
+        sellBicycle: function (model) {
+            var bicycle;
+            switch (model) {
+                case "The Speedster":
+                    bicycle = new SpeedSter();
+                    break;
+                case "The Lowrider":
+                    bicycle = new Lowrider();
+                    break;
+                case "The Comfort Cruiser":
+                default:
+                    bicycle = new ComfortCruiser();
+            }
+            Interface.ensureImplements(bicycle, Bicycle);
+            bicycle.assemble();
+            bicycle.wash();
+            return bicycle;
+        }
+    };
+
+    /* The Bicycle interface. */
+    var Bicycle = new Interface('Bicycle', ['assemble', 'wash', 'ride', 'repair']);
+
+    /* Speedster class. */
+    var Speedster = function () {
+
+    };
+    Speedster.prototype = {
+        assemble: function () {
+        },
+        wash: function () {
+        },
+        ride: function () {
+        },
+        repair: function () {
+        }
+    };
+
+    var californiaCruisers = new BicycleShop();
+    var yourNewBike = californiaCruisers.sellBicycle("The Speedster");
+
+    /* BicycleFactory namespace. */
+    var BicycleFactory = {
+        createBicycle: function (model) {
+            var bicycle;
+            switch (model) {
+                case "The Speedster":
+                    bicycle = new SpeedSter();
+                    break;
+                case "The Lowrider":
+                    bicycle = new Lowrider();
+                    break;
+                case "The Comfort Cruiser":
+                default:
+                    bicycle = new ComfortCruiser();
+            }
+            Interface.ensureImplements(bicycle, Bicycle);
+            return bicycle;
+        }
+    };
+
+    /* BicycleShop class, improved. */
+    var BicycleShop = function () {
+    };
+    BicycleShop.prototype = {
+        sellBicycle: function (model) {
+            var bicycle = BicycleFactory.createBicycle(model);
+            bicycle.assemble();
+            bicycle.wash();
+            return bicycle;
+        }
+    };
+
+    /* BicycleFactory namespace,with more models. */
+    var BicycleFactory = {
+        createBicycle: function (model) {
+            var bicycle;
+            switch (model) {
+                case "The Speedster":
+                    bicycle = new SpeedSter();
+                    break;
+                case "The Lowrider":
+                    bicycle = new Lowrider();
+                    break;
+                case "The Flatlander":
+                    bicycle = new Flatlander();
+                    break;
+                case "The Comfort Cruiser":
+                default:
+                    bicycle = new ComfortCruiser();
+            }
+            Interface.ensureImplements(bicycle, Bicycle);
+            return bicycle;
+        }
+    };
+
+    //    MyNamespace.Singleton = (function () {
+    //        //私有成员
+    //        var privateAttribute1 = false;
+    //        var privateAttribute2 = [1, 2, 3];
+    //
+    //        function privateMethod1() {
+    //
+    //        }
+    //
+    //        function privateMethod2() {
+    //
+    //        }
+    //
+    //        return {
+    //            //public members
+    //            publicAttribute1: true,
+    //            publicAttribute2: 10,
+    //            publicMethod1: function () {
+    //
+    //            },
+    //            publicMethod2: function (args) {
+    //
+    //            }
+    //        }
+    //    })();
+
+    //    var MyNamespace = {
+    //        findProduct: function (id) {
+    //
+    //        }
+    //    };
+
+    //    var Singleton = {
+    //        attribute1: true,
+    //        attribute2: 10,
+    //        method1: function () {
+    //
+    //        },
+    //        method2: function (args) {
+    //
+    //        }
+    //    };
+
+
+    //    var Class = (function () {
+    //        var UPPER_BOUND = 100;
+    //
+    //        //构造器
+    //        var ctor = function (constructorArgument) {
+    //
+    //        };
+    //        //静态特权方法
+    //        ctor.getUPPER_BOUND = function () {
+    //            return UPPER_BOUND;
+    //        };
+    //        return ctor;
+    //
+    //    })();
+
+    //    var Book = (function () {
+    //
+    //        //私有静态变量
+    //        var numOfBooks = 0;
+    //
+    //        //私有静态方法
+    //        function checkIsbn(isbn) {
+    //
+    //        }
+    //
+    //        //返回一个构造器
+    //        return function (newIsbn, newTitle, newAuthor) {
+    //            //私有属性
+    //            var isbn, title, author;
+    //
+    //            //特权方法
+    //            this.getIsbn = function () {
+    //                return isbn;
+    //            };
+    //            this.setIsbn = function (newIsbn) {
+    //                if (!checkIsbn(newIsbn)) {
+    //                    throw new Error('Book: Invalid ISBN.');
+    //                }
+    //                isbn = newIsbn;
+    //            };
+    //            this.getTitle = function () {
+    //                return title;
+    //            };
+    //            this.setTitle = function (newTitle) {
+    //                title = newTitle || "No title specified";
+    //            };
+    //            this.getAuthor = function () {
+    //                return author;
+    //            };
+    //            this.setAuthor = function (newAuthor) {
+    //                author = newAuthor || "No author specified";
+    //            };
+    //
+    //            //Constructed code.
+    //            numOfBooks++;
+    //            if (numOfBooks > 50) {
+    //                throw new Error(".");
+    //            }
+    //            this.setIsbn(newIsbn);
+    //            this.setTitle(newTitle);
+    //            this.setAuthor(newAuthor);
+    //        }
+    //    })();
+    //
+    //    //公共静态方法
+    //    Book.convertToTitleCase = function (inputString) {
+    //
+    //    };
+    //
+    //    //公共非特权方法
+    //    Book.prototype = {
+    //        display: function () {
+    //
+    //        }
+    //    };
+
+    //    function foo() {
+    //        var a = 10;
+    //
+    //        function bar() {
+    //            a *= 2;
+    //            return a;
+    //        }
+    //
+    //        return bar;
+    //    }
+    //
+    //    var baz = foo();
+    //    console.log(baz());//20
+    //    console.log(baz());//40
+    //    console.log(baz());//80
+    //
+    //    var blat = foo();
+    //    console.log(blat());//20
+
+    //    function foo() {
+    //        var a = 10;
+    //
+    //        function bar() {
+    //            a *= 2;
+    //        }
+    //
+    //        bar();
+    //        return a;
+    //    }
+
+    //    for (var i = 1; i <= 3; i++) {
+    //        setTimeout(function () {
+    //            console.log(i);
+    //        }, 0);
+    //    }//4, 4, 4
+
+    //    var global = this;
+    //    var tom = {
+    //        name: "Tom",
+    //        home: "desine",
+    //        getInfo: function () {
+    //            console.log(this.name + ", from " + this.home);
+    //        }
+    //    };
+    //    tom.getInfo();
+    //    var jerry = {
+    //        name: "Jerry",
+    //        getInfo: tom.getInfo
+    //    };
+    //    jerry.getInfo();
+    //
+    //    global.getInfo = tom.getInfo;
+    //    global.getInfo();
+
+
+    //    function func() {
+    //        var x = 0;
+    //        console.log("func");
+    //    }
+    //    func();
+
+    //    var topone = "top-level";
+    //    (function outter() {
+    //        var middle = "mid-level";
+    //        (function inner() {
+    //            var bottom = "bot-level";
+    //            console.log(topone + ">" + middle + ">" + bottom);
+    //        })();
+    //    })();
+
+    //    function func(handle, message) {
+    //        var id = 0;
+    //
+    //        function doNothing(x) {
+    //            return x;
+    //        }
+    //
+    //        handle(message);
+    //    }
+    //
+    //    func(print, "hello");
+
+</script>
+</body>
+</html>
