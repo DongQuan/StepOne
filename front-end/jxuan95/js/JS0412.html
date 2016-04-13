@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<p>Welcome to Index</p>
+
+<div id="main"></div>
+<script type="text/javascript">
+
+    var views = document.getElementById("views");
+    views.innerHTML = "";//将元素内容清空
+    var container = document.createElement("div");
+    container.id = "user";
+    var name = document.createElement("span");
+    name.innerHTML = data.name;
+    container.appendChild(name);
+    views.appendChild(container);
+
+    //    var object = {some: "boject"};
+    //    //序列化并保存一个对象
+    //    localStorage.setItem("seriData", JSON.stringify(object));
+    //    //读取并将JSON转换为对象
+    //    var result = JSON.parse(localStorage.getItem("seriData"));
+
+    //    //设置一个值
+    //    localStorage["someData"] = "wem";
+    //    //存储数据的个数
+    //    var itemsStored = localStorage.length;
+    //    //设置一个项(是一种hash写法)
+    //    localStorage.setItem("someData", "wem");
+    //    //得到一个已经存储的值，如果不存在就返回Null
+    //    localStorage.getItem("someData");//"wem";
+    //    //删除一个项，如果不存在就返回null
+    //    localStorage.removeItem("someData");
+    //    //清空本地存储
+    //    localStorage.clear();
+
+    //    if (typeof Object.create !== "function") {
+    //        Object.create = function (o) {
+    //            function F() {
+    //            }
+    //
+    //            F.prototype = o;
+    //            return new F();
+    //        }
+    //    }
+
+    //    //在ul列表上做了事件委托
+    //    list.addEventListener("click", function (e) {
+    //        if (e.currentTarget.tagName == "li") {
+    //            return false;
+    //        }
+    //    }, false);
+
+    //    button.addEventListener("click", function (e) {
+    //        e.stopPropagation();
+    //    }, false);
+
+    //    Person.prototype.breath = function(){};
+    //    var person = new Person;
+    //    person.breath();
+
+    //    Person.find - function (id) {};
+    //    var person = Person.find(1);
+
+    //    var Person = function (name) {
+    //        this.name = name;
+    //    };
+    //
+    //    //实例化一个Person
+    //    var alice = new Person("alice");
+    //
+    //    //检查这个实例
+    //    assert(alice instanceof Person);
+
+
+    //    function clientToInterfaceAdapter(o) {
+    //        interfaceMethod(o.string1, o.string2, o.string3);
+    //    }
+    //    clientToInterfaceAdapter(clientObject);
+
+
+    //    var clientObject = {
+    //        string1: "foo",
+    //        string2: "bar",
+    //        string3: "baz"
+    //    };
+    //    function interfaceMethod(str1, str2, str3) {
+    //
+    //    }
+
+    //    var Class1 = function (a, b, c) {
+    //        this.a = a;
+    //        this.b = b;
+    //        this.c = c;
+    //    };
+    //    var Class2 = function (d) {
+    //        this.d = d;
+    //    };
+    //    var BridgeClass = function (a, b, c, d) {
+    //        this.one = new Class1(a, b, c);
+    //        this.two = new Class2(d);
+    //    };
+
+    //    function getBeerById(id, callback) {
+    //        asyncRequest('GET', 'beer.uri?id=' + id, function (resp) {
+    //            callback(resp.responseText);
+    //        })
+    //    }
+    //
+    //    addEvent(element, 'click', getBeerByIdBridge);
+    //    function getBeerBIdBridge(e) {
+    //        getBeerById(this.id, function (beer) {
+    //            console.log(beer);
+    //        });
+    //    }
+
+    //    addEvent(element, 'click', getBeerById);
+    //    function getBeerById(e) {
+    //        var id = this.id;
+    //        asyncRequest('GET', 'beer.uri?id=' + id, function (resp) {
+    //            console.log(resp.responseText);
+    //        });
+    //    }
+</script>
+</body>
+</html>
