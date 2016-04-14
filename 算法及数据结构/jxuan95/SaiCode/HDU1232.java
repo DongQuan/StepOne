@@ -11,11 +11,45 @@ public class HDU1232 {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             int N = in.nextInt();
+            if (N == 0) {
+                break;
+            }
             int M = in.nextInt();
+            int[] pro = new int[N + 1];
+            for (int i = 1; i < pro.length; i++) {
+                pro[i] = i;
+            }
             while (M > 0) {
+                int a = in.nextInt();
+                int b = in.nextInt();
+                combain(a, b, pro);
 
                 M--;
             }
+            int count = -1;//因为最终的跟节点的pro一定是它本身，所以需要减掉一个次数
+            for (int i = 1; i < pro.length; i++) {
+                if (pro[i] == i) {
+                    count++;
+                }
+            }
+            System.out.println(count);
         }
     }
+
+    public static void combain(int x, int y, int[] pro) {
+        int a, b;
+        a = find(pro, x);
+        b = find(pro, y);
+        if (a != b) {
+            pro[a] = b;
+        }
+    }
+
+    public static int find(int[] pro, int x) {
+        if (pro[x] != x) {
+            pro[x] = find(pro, pro[x]);
+        }
+        return pro[x];
+    }
+
 }
