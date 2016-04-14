@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<p>Welcome to Index</p>
+
+<canvas height="200" width="200" style="border:1px solid #000" id="diagonal"></canvas>
+
+<div id="main"></div>
+
+<video></video>
+
+<script type="text/javascript">
+
+    var originWhiteList = ["XXX.com", "WWW.com"];
+    function checkWhiteList(origin) {
+        for (var i = 0; i < originWhiteList.length; i++) {
+            if (origin === originWhiteList[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function messageHandler(e) {
+        if (checkWhiteList(e.origin)) {
+
+        } else {
+
+        }
+    }
+
+    //    if (typeof window.postMessage == undefined) {
+    //        alert("该浏览器不支持postMessage");
+    //    }
+
+    //    window.addEventListener("message", messageHandler, true);
+    //    function messageHandler(e) {
+    //        switch (e.origin) {
+    //            case "friend.example.com":
+    //                //处理消息
+    //                processMessage(e.data);
+    //                break;
+    //            default:
+    //            //消息来源无法识别
+    //            //消息被忽略
+    //        }
+    //    }
+
+    //    function loadDemo() {
+    //        if (navigator.geolocation) {
+    //            alert("支持定位！")
+    //        }
+    //    }
+
+    //    function drawDiagonal() {
+    //        //取得canvas元素及其绘图上下文
+    //        var canvas = document.getElementById("diagonal");
+    //        var context = canvas.getContext("2d");
+    //
+    //        //用绝对坐标来创建一条路径
+    //        context.beginPath();
+    //        context.moveTo(70, 140);
+    //        context.lineTo(140, 70);
+    //
+    //        //将这条线绘制到canvas上
+    //        context.stroke();
+    //    }
+    //
+    //    window.addEventListener("load", drawDiagonal, true);
+
+    //    document.createElement("canvas").getContext("2d");
+    //    document.getElementById("support").innerHTML = "support";
+
+</script>
+</body>
+</html>
