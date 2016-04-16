@@ -16,29 +16,44 @@
 
 <canvas height="200" width="200" style="border:1px solid #000" id="diagonal"></canvas>
 
-<div id="main"></div>
+<div id="main">div</div>
 
 <video></video>
 
 <script type="text/javascript">
 
-    var originWhiteList = ["XXX.com", "WWW.com"];
-    function checkWhiteList(origin) {
-        for (var i = 0; i < originWhiteList.length; i++) {
-            if (origin === originWhiteList[i]) {
-                return true;
-            }
-        }
-        return false;
+    //一个ID为main的元素
+//    var obj = document.getElementById("main");
+    //用于绑定一个数组
+//    var items = ["click", "keypress"];
+    //遍历数组的每个成员
+    for (var i = 0; i < 5; i++) {
+        //使用一个自执行的匿名函数来激发出作用域
+        (function(e) {
+            setTimeout(function() {
+                console.log(e);
+            }, 1000);
+        })(i);
     }
 
-    function messageHandler(e) {
-        if (checkWhiteList(e.origin)) {
 
-        } else {
-
-        }
-    }
+//    var originWhiteList = ["XXX.com", "WWW.com"];
+//    function checkWhiteList(origin) {
+//        for (var i = 0; i < originWhiteList.length; i++) {
+//            if (origin === originWhiteList[i]) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+//
+//    function messageHandler(e) {
+//        if (checkWhiteList(e.origin)) {
+//
+//        } else {
+//
+//        }
+//    }
 
     //    if (typeof window.postMessage == undefined) {
     //        alert("该浏览器不支持postMessage");
