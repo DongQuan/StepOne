@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        div {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<p>Welcome to Index</p>
+
+<canvas height="200" width="200" style="border:1px solid #000" id="diagonal"></canvas>
+
+<div id="main"></div>
+
+<video></video>
+
+<script type="text/javascript">
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open('get', 'demo', 'true');
+    xmlHttp.send();
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+
+        }
+    };
+
+    //    var a = [1, 5, 7, 3];
+    //    var i = 0, j = a.length - 1;
+    //    var target = 10;
+    //    while (i < j) {
+    //        if (a[i] + a[j] == target) {
+    //            console.log(a[i] + "+" + a[j]);
+    //            break;
+    //        } else if (a[i] + a[j] < target) {
+    //            i++;
+    //        } else {
+    //            j--;
+    //        }
+    //    }
+</script>
+</body>
+</html>
