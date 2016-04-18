@@ -1,49 +1,54 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Index</title>
-    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
     <style>
+        body {
+            height: 100%;
+            width: 100%;
+            /*margin: 0;*/
+        }
+
         div {
             display: inline-block;
+            height: 100%;
+            width: 33%;
         }
+
     </style>
 </head>
 <body>
-<h1>Hello World</h1>
+<div id="elem1"></div>
+<div id="elem2"></div>
+<div></div>
 
-<p>Welcome to Index</p>
+<script>
+    function isOverlap(elem1, elem2) {
+        var elemoffsetLeft1 = elem1.offsetLeft;//元素1距离左边界的位置
+        var elemoffsetLeft2 = elem2.offsetLeft;//元素2距离左边界的位置
+        var elemoffsetTop1 = elem1.offsetTop;//元素1距离顶部的位置
+        var elemoffsetTop2 = elem2.offsetTop;//元素2距离顶部的位置
+        var elemwidth1 = elem1.offsetWidth;//元素1宽度
+        var elemwidth2 = elem2.offsetWidth;//元素2宽度
+        var elemh1 = elem1.offsetHeight;//元素1高度
+        var elemh2 = elem2.offsetHeight;//元素2高度
 
-<canvas height="200" width="200" style="border:1px solid #000" id="diagonal"></canvas>
-
-<div id="main"></div>
-
-<video></video>
-
-<script type="text/javascript">
-
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open('get', 'demo', 'true');
-    xmlHttp.send();
-    xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-
+        if (elemoffsetLeft1 + elemwidth1 > elemoffsetLeft2
+                && elemoffsetLeft2 + elemwidth2 > elemoffsetLeft1
+                && elemoffsetTop1 + elemh1 > elemoffsetTop2
+                && elemoffsetTop2 + elemh2 > elemoffsetTop1) {
+            return true;
+        } else {
+            return false;
         }
-    };
 
-    //    var a = [1, 5, 7, 3];
-    //    var i = 0, j = a.length - 1;
-    //    var target = 10;
-    //    while (i < j) {
-    //        if (a[i] + a[j] == target) {
-    //            console.log(a[i] + "+" + a[j]);
-    //            break;
-    //        } else if (a[i] + a[j] < target) {
-    //            i++;
-    //        } else {
-    //            j--;
-    //        }
-    //    }
+    }
+
+    var elem1 = document.getElementById("elem1");
+    var elem2 = document.getElementById("elem2");
+
+    console.log(elem1)
+
+    console.log(isOverlap(elem1, elem2));
 </script>
+
 </body>
 </html>
