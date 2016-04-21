@@ -21,33 +21,65 @@
 <div></div>
 
 <script>
-    function isOverlap(elem1, elem2) {
-        var elemoffsetLeft1 = elem1.offsetLeft;//元素1距离左边界的位置
-        var elemoffsetLeft2 = elem2.offsetLeft;//元素2距离左边界的位置
-        var elemoffsetTop1 = elem1.offsetTop;//元素1距离顶部的位置
-        var elemoffsetTop2 = elem2.offsetTop;//元素2距离顶部的位置
-        var elemwidth1 = elem1.offsetWidth;//元素1宽度
-        var elemwidth2 = elem2.offsetWidth;//元素2宽度
-        var elemh1 = elem1.offsetHeight;//元素1高度
-        var elemh2 = elem2.offsetHeight;//元素2高度
 
-        if (elemoffsetLeft1 + elemwidth1 > elemoffsetLeft2
-                && elemoffsetLeft2 + elemwidth2 > elemoffsetLeft1
-                && elemoffsetTop1 + elemh1 > elemoffsetTop2
-                && elemoffsetTop2 + elemh2 > elemoffsetTop1) {
-            return true;
-        } else {
-            return false;
-        }
+    // 全局变量
+    var foo = 1;
+    var bar = 2;
+    var i = 2;
 
+    function test(i) {
+        // 函数 test 内的局部作用域
+        i = 5;
+
+        var foo = 3;
+        bar = 4;
     }
+    test(10);
+    console.log("foo:" + foo + " " + "bar:" + bar + " " + 'i:' + i);
 
-    var elem1 = document.getElementById("elem1");
-    var elem2 = document.getElementById("elem2");
+    //    var x = 0, y = 0;
+    //    (function () {
+    //        var x = 5;
+    //        y++;
+    //    })();
+    //    console.log(x + ' ' + y);
 
-    console.log(elem1)
+    //    Object.prototype.bar = 1;
+    //    var foo = {moo: 2};
+    //    for (var i in foo) {
+    //        if (foo.hasOwnProperty(i)) {
+    //            console.log(i);
+    //        }
+    //    }
 
-    console.log(isOverlap(elem1, elem2));
+
+    //    function isOverlap(elem1, elem2) {
+    //        var elemoffsetLeft1 = elem1.offsetLeft;//元素1距离左边界的位置
+    //        var elemoffsetLeft2 = elem2.offsetLeft;//元素2距离左边界的位置
+    //        var elemoffsetTop1 = elem1.offsetTop;//元素1距离顶部的位置
+    //        var elemoffsetTop2 = elem2.offsetTop;//元素2距离顶部的位置
+    //        var elemwidth1 = elem1.offsetWidth;//元素1宽度
+    //        var elemwidth2 = elem2.offsetWidth;//元素2宽度
+    //        var elemh1 = elem1.offsetHeight;//元素1高度
+    //        var elemh2 = elem2.offsetHeight;//元素2高度
+    //
+    //        if (elemoffsetLeft1 + elemwidth1 > elemoffsetLeft2
+    //                && elemoffsetLeft2 + elemwidth2 > elemoffsetLeft1
+    //                && elemoffsetTop1 + elemh1 > elemoffsetTop2
+    //                && elemoffsetTop2 + elemh2 > elemoffsetTop1) {
+    //            return true;
+    //        } else {
+    //            return false;
+    //        }
+    //
+    //    }
+    //
+    //    var elem1 = document.getElementById("elem1");
+    //    var elem2 = document.getElementById("elem2");
+    //
+    //    console.log(elem1)
+    //
+    //    console.log(isOverlap(elem1, elem2));
 </script>
 
 </body>
