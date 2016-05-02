@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        let array = [1, 5, 9, 6, 32, 14];
+        array.sort();//对数组进行排序
+
+        let min = 5;
+        let max = 10;
+
+        let getNum = function () {
+            let raNum = Math.random() * (max - min) + min;
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === raNum) {
+                    getNum();
+                    break;
+                }
+            }
+
+            return raNum;
+        };
+
+        console.log(getNum());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

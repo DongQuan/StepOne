@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    let n = 1324;
+    let m = 2410;
+    let c1 = [];
+    let c2 = [];
+    let result = [];
+    for (let i = 0; i < n.toString().length; i++) {
+        c1[i] = parseInt(n.toString().charAt(i));
+        c2[i] = parseInt(m.toString().charAt(i));
+    }
+
+    c1.sort();//对c1数组进行排序,生成递增序列
+    let i = 0, k = 0;
+    let used = [];//记录是否被使用
+
+    for (let j = 0; j < c1.length; j++) {
+        i = 0;
+
+        //挑出一个等于或者大于的数字
+        while (i < c1.length && (used[i] || c1[i] < c2[j])) {
+            i++;
+        }
+
+        result[k++] = c1[i];
+        used[i] = true;
+        //if (i == c1.length - 1) break;
+        if (c1[i] > c2[j]) {
+            //大于的时候直接,复制未使用的递增序列
+            for (let i = 0; i < c1.length; i++) {
+                if (!used[i]) result[k++] = c1[i];
+            }
+            break;
+        }
+    }
+
+    console.log(result);
+
+</script>
+</html>
