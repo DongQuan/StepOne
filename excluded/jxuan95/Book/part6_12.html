@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        //排序函数
+        function sortNumber(a, b) {
+            return a - b;
+        }
+
+        let array = [1, 9, 6, 3, 10, 14, 52, 8];
+        array.sort(sortNumber);
+        let k = 4;//求最小的4个数
+        let result;
+        result = array.slice(0, k);
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
